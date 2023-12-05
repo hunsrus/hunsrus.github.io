@@ -7,7 +7,11 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="jquery.bracket.min.js"></script>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="dist/jquery.bracket.min.js"></script>
+  <link href="dist/jquery.bracket.min.css" rel="stylesheet">
+  
   <style>
     body {
       background-color: #f8f9fa;
@@ -109,28 +113,55 @@
 </div>
 
 <script>
-    // Tournament data
-    var data = {
-        teams: [ "Team 1", "Team 2", "Team 3", "Team 4" ],
-        results: [
-            [
-                [ "Team 1", "Team 2" ],
-                [ "Team 3", "Team 4" ]
-            ],
-            [
-                [ "Winner 1", "Winner 2" ]
-            ],
-            [
-                [ "Champion" ]
-            ]
+    var doubleElimination = {
+    "teams": [
+      ["Team 1", "Team 2"],
+      ["Team 3", "Team 4"]
+    ],
+    "results": [            // List of brackets (three since this is double elimination)
+      [                     // Winner bracket
+        [[1, 2], [3, 4]],   // First round and results
+        [[5, 6]]            // Second round
+      ],
+      [                     // Loser bracket
+        [[7, 8]],           // First round
+        [[9, 10]]           // Second round
+      ],
+      [                     // Final "bracket"
+        [                   // First round
+          [11, 12],         // Match to determine 1st and 2nd
+          [13, 14]          // Match to determine 3rd and 4th
+        ],
+        [                   // Second round
+          [15, 16]          // LB winner won first round (11-12) so need a final decisive round
         ]
-    };
+      ]
+    ]
+  }
 
-    // Initialize Brackets.js
-    $('#bracket').jquery.bracket({
-        // Specify the tournament data
-        init: data
-    });
+  $('.demo').bracket({
+    init: doubleElimination
+  });
+
+  $('.demo').bracket({
+    init: null, // data to initialize
+    save: null, // called whenever bracket is modified
+    userData: null, // custom user data
+    onMatchClick: null, // callback
+    onMatchHover: null, // callback
+    decorator: null, // a function
+    skipSecondaryFinal: false,
+    skipGrandFinalComeback: false,
+    skipConsolationRound: false,
+    dir: 'rl', // "rl" or  "lr",
+    disableToolbar: false,
+    disableTeamEdit: false,
+    teamWidth: '', // number
+    scoreWidth: '', // number
+    roundMargin: '', // number
+    matchMargin: '', // number
+  });
+
 </script>
   
 </body>
