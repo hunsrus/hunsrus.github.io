@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
@@ -92,11 +93,13 @@
     </div>
     
     <!-- Gráfico de Llaves del Torneo -->
-    <div class="col-md-4">
-      <h3 class="mb-4">Llaves del Torneo</h3>
-      <!-- Agrega tu gráfico de llaves aquí utilizando alguna librería -->
-      <!-- Por ejemplo, podrías utilizar Chart.js o cualquier otra biblioteca que prefieras -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <h3 class="mb-4">Llaves del Torneo</h3>
+        <canvas id="chart"></canvas>
+      </div>
     </div>
+
   </div>
 </div>
 
@@ -104,5 +107,42 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Datos para el gráfico (puedes personalizar esto según la estructura de tu torneo)
+    var data = {
+      labels: ['Octavos', 'Cuartos', 'Semifinal', 'Final'],
+      datasets: [{
+        label: 'Partidos',
+        data: [16, 8, 4, 2], // Número de partidos en cada ronda
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    };
+
+    // Configuración del gráfico
+    var options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          stepSize: 1
+        }
+      }
+    };
+
+    // Obtén el contexto del lienzo y dibuja el gráfico
+    var ctx = document.getElementById('chart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  });
+</script>
+
+  
 </body>
 </html>
