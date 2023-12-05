@@ -4,33 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
   <title>Torneo de Pádel</title>
 </head>
 <body>
 
-<div class="container mt-4">
+<div class="container mt-5">
   <div class="row">
     <div class="col-md-8">
-      <h1>Torneo de Pádel</h1>
+      <h1 class="mb-4">Torneo de Pádel</h1>
       
       <!-- Información del Torneo -->
-      <div class="card">
+      <div class="card mb-4">
         <div class="card-body">
-          <h3>Información del Torneo</h3>
-          <p>Fecha: 10 de diciembre de 2023</p>
-          <p>Lugar: Club de Pádel XYZ</p>
+          <h3 class="card-title">Información del Torneo</h3>
+          <p class="card-text">Fecha: 10 de diciembre de 2023</p>
+          <p class="card-text">Lugar: Club de Pádel XYZ</p>
           <!-- Otra información relevante sobre el torneo -->
         </div>
       </div>
       
       <!-- Jugadores Inscritos -->
-      <div class="card mt-4">
+      <div class="card">
         <div class="card-body">
-          <h3>Jugadores Inscritos</h3>
-          <ul>
-            <li>Jugador 1</li>
-            <li>Jugador 2</li>
-            <li>Jugador 3</li>
+          <h3 class="card-title">Jugadores Inscritos</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Jugador 1</li>
+            <li class="list-group-item">Jugador 2</li>
+            <li class="list-group-item">Jugador 3</li>
             <!-- Agrega más jugadores según sea necesario -->
           </ul>
         </div>
@@ -39,8 +48,8 @@
     
     <!-- Gráfico de Llaves del Torneo -->
     <div class="col-md-4">
-      <h3>Llaves del Torneo</h3>
-      <!-- Aquí puedes agregar tu gráfico de llaves utilizando alguna librería de gráficos o código personalizado -->
+      <h3 class="mb-4">Llaves del Torneo</h3>
+      <!-- Agrega tu gráfico de llaves aquí utilizando alguna librería -->
       <!-- Por ejemplo, podrías utilizar Chart.js o cualquier otra biblioteca que prefieras -->
     </div>
   </div>
@@ -52,3 +61,4 @@
 
 </body>
 </html>
+
