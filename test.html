@@ -20,6 +20,16 @@
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
+    /* Custom CSS for horizontal scrolling */
+    .scrollable-card {
+        overflow-x: auto;
+    }
+
+    .scrollable-content {
+        display: inline-block;
+        white-space: nowrap;
+    }
   </style>
   <title>Torneo Elías Metz 2023</title>
 </head>
@@ -98,10 +108,12 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card scrollable-card">
         <div class="card-body">
           <h3 class="card-title">Llave final</h3>
-          <div class="demo">
+          <div class="scrollable-content">
+            <div class="demo">
+            </div>
           </div>
         </div>
       </div>
