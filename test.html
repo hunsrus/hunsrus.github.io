@@ -90,40 +90,50 @@
         </div>
       </div>
     </div>
-    
-    <div class="card">
-      <div class="card-header text-center">
-          <h4>Padel Tournament Brackets</h4>
-      </div>
-      <div class="card-body tournament-bracket">
-          <!-- Round 1 -->
-          <div class="round">
-              <div class="match">
-                  <div class="team">Team 1</div>
-                  <div class="team">Team 2</div>
-              </div>
-              <div class="match">
-                  <div class="team">Team 3</div>
-                  <div class="team">Team 4</div>
-              </div>
-          </div>
-  
-          <!-- Round 2 -->
-          <div class="round">
-              <div class="match">
-                  <div class="team">Winner 1</div>
-                  <div class="team">Winner 2</div>
-              </div>
-          </div>
-  
-          <!-- Final -->
-          <div class="round">
-              <div class="match">
-                  <div class="team">Champion</div>
-              </div>
-          </div>
-      </div>
-  </div>
+
+    <div class="bracket-grid" style="grid-template-rows:repeat(14,var(--grid-row-height));grid-template-columns:0 minmax(12em, 12em) 3em minmax(12em, 12em)">
+    	<div class="bracket-grid-header round1">
+    		<div class="bracket-header-content">Round 1</div>
+    	</div>
+    	<div class="bracket-spacer round1"></div>
+    	<div class="bracket-team round1 teamhighlight teamhighlighter">
+    		<div class="bracket-team-name"></div>
+    		<div class="bracket-team-points"></div>
+    	</div>
+    	<div class="bracket-team round1 teamhighlight teamhighlighter">
+    		<div class="bracket-team-name"></div>
+    		<div class="bracket-team-points"></div>
+    	</div>
+    	<div class="bracket-spacer round1"></div>
+    	<div class="bracket-spacer round1"></div>
+    	<div class="bracket-team round1 teamhighlight teamhighlighter">
+    		<div class="bracket-team-name"></div>
+    		<div class="bracket-team-points"></div>
+    	</div>
+    	<div class="bracket-team round1 teamhighlight teamhighlighter">
+    		<div class="bracket-team-name"></div>
+    		<div class="bracket-team-points"></div>
+    	</div>
+    	<div class="bracket-spacer round1"></div>
+    	<div class="bracket-line round1" style="grid-row:span 5;"></div>
+    	<div class="bracket-line z-down round1" style="grid-row:span 2;"></div>
+    	<div class="bracket-line round1" style="grid-row:span 2;"></div>
+    	<div class="bracket-line z-up round1" style="grid-row:span 2;"></div>
+    	<div class="bracket-grid-header round2">
+    		<div class="bracket-header-content">Round 2</div>
+    	</div>
+    	<div class="bracket-spacer round2" style="grid-row:span 3;"></div>
+    	<div class="bracket-spacer round2"></div>
+    	<div class="bracket-team round2 teamhighlight teamhighlighter">
+    		<div class="bracket-team-name"></div>
+    		<div class="bracket-team-points"></div>
+    	</div>
+    	<div class="bracket-team round2 teamhighlight teamhighlighter">
+    		<div class="bracket-team-name"></div>
+    		<div class="bracket-team-points"></div>
+    	</div>
+    	<div class="bracket-spacer round2"></div>
+    </div>
 
   </div>
 </div>
