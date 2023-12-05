@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bracket-generator@1.0.7/dist/bracket-generator.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
@@ -93,43 +91,50 @@
       </div>
     </div>
     
-    <!-- Gráfico de Llaves del Torneo -->
-    <div class="row mt-4">
-      <div class="col-12">
-        <h3 class="mb-4">Llaves del Torneo</h3>
-        <div id="tournament"></div>
+    <div class="card">
+      <div class="card-header text-center">
+          <h4>Padel Tournament Brackets</h4>
       </div>
-    </div>
+      <div class="card-body">
+          <div class="container">
+              <div class="row">
+                  <!-- Round 1 -->
+                  <div class="col-md-6">
+                      <div class="match">
+                          <div class="team">Team 1</div>
+                          <div class="team">Team 2</div>
+                      </div>
+                      <div class="match">
+                          <div class="team">Team 3</div>
+                          <div class="team">Team 4</div>
+                      </div>
+                  </div>
+  
+                  <!-- Round 2 -->
+                  <div class="col-md-6">
+                      <div class="match">
+                          <div class="team">Winner 1</div>
+                          <div class="team">Winner 2</div>
+                      </div>
+                  </div>
+  
+                  <!-- Final -->
+                  <div class="col-md-12 text-center mt-4">
+                      <div class="match">
+                          <div class="team">Champion</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
   </div>
 </div>
-  
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var tournamentData = {
-      teams: [ 'Equipo 1', 'Equipo 2', 'Equipo 3', 'Equipo 4', 'Equipo 5', 'Equipo 6', 'Equipo 7', 'Equipo 8' ],
-      results: [[
-        [[1, 2], [3, 4]],
-        [[5, 6], [7, 8]]
-      ], [
-        [[9, 10], [11, 12]],
-        [[13, 14], [15, 16]]
-      ], [
-        [[17, 18], [19, 20]],
-        [[21, 22], [23, 24]]
-      ], [
-        [[25, 26], [27, 28]]
-      ]]
-    };
-
-    $('#tournament').bracket({
-      init: tournamentData,
-    });
-  });
-</script>
   
 </body>
 </html>
