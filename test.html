@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="gray">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="dist/jquery.bracket.min.js"></script>
   <link href="dist/jquery.bracket.min.css" rel="stylesheet">
   
   <style>
+    [data-bs-theme="gray"] {
+      --bs-body-color: #f8f9fa;
+      --bs-body-color-rgb: #f8f9fa;
+      --bs-body-bg: #4E565D;
+      --bs-body-bg-rgb: #4E565D;
+      --bs-tertiary-bg: #{$blue-600};
+
+      
+      .btn-info {
+        --bs-body-color: #37BBF3;
+        --bs-body-color-rgb: #37BBF3;
+        --bs-body-bg: #37BBF3;
+        --bs-body-bg-rgb: #37BBF3;
+
+      }
+
+    }
+
     body {
-      background-color: #f8f9fa;
+      /*background-color: #f8f9fa;*/
+      background-color: #F36F37;
     }
     .card {
       border-radius: 15px;
@@ -40,7 +59,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 mx-auto">
+    <div class="col-md-8 mx-auto">
       <img src="logo.png" class="mx-auto d-block m-5 w-50">
       <!-- <h1 class="mb-4 text-center text-md-left">Torneo Elías Metz 2023</h1> -->
       
@@ -65,17 +84,17 @@
       </div>
 
       <!-- Botones -->
-      <div class="row mt-4 mb-4">
-        <div class="col-6 col-md-3 mb-2">
+      <div class="row mt-4 mb-2 mx-auto">
+        <div class="col-md-3">
           <button class="btn btn-info btn-block">Inscriptos</button>
         </div>
-        <div class="col-6 col-md-3 mb-2">
+        <div class="col-md-3">
           <button class="btn btn-info btn-block">Horarios</button>
         </div>
-        <div class="col-6 col-md-3 mb-2">
+        <div class="col-md-3">
           <button class="btn btn-info btn-block">Clasificación</button>
         </div>
-        <div class="col-6 col-md-3 mb-2">
+        <div class="col-md-3">
           <button class="btn btn-info btn-block">Llave final</button>
         </div>
       </div>
@@ -127,7 +146,6 @@
 
       <!-- Clasificación -->
       <div class="card mb-4">
-      <!-- <div class="card mb-4"> -->
         <h3 class="card-header">
           Clasificación
         </h3>
@@ -152,43 +170,43 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Jugador 1<br>Jugador 2</th>
-                  <td>PTS</td>
-                  <td>PJ</td>
-                  <td>PG</td>
-                  <td>PP</td>
-                  <td>SF</td>
-                  <td>SC</td>
-                  <td>DS</td>
-                  <td>GF</td>
-                  <td>GC</td>
-                  <td>DG</td>
+                  <th scope="row">Gustavo Adalberto Yarce<br>Alejandro Dachary</th>
+                  <td>1</td>  <!-- PTS -->
+                  <td>2</td>   <!-- PJ -->
+                  <td>3</td>   <!-- PG -->
+                  <td>4</td>   <!-- PP -->
+                  <td>5</td>   <!-- SF -->
+                  <td>6</td>   <!-- SC -->
+                  <td>7</td>   <!-- DS -->
+                  <td>8</td>   <!-- GF -->
+                  <td>9</td>   <!-- GC -->
+                  <td>10</td>   <!-- DG -->
                 </tr>
                 <tr>
                   <th scope="row">Jugador 3<br>Jugador 4</th>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td>0</td>  <!-- PTS -->
+                  <td>0</td>   <!-- PJ -->
+                  <td>0</td>   <!-- PG -->
+                  <td>0</td>   <!-- PP -->
+                  <td>0</td>   <!-- SF -->
+                  <td>0</td>   <!-- SC -->
+                  <td>0</td>   <!-- DS -->
+                  <td>0</td>   <!-- GF -->
+                  <td>0</td>   <!-- GC -->
+                  <td>0</td>   <!-- DG -->
                 </tr>
                 <tr>
                   <th scope="row">Jugador 5<br>Jugador 6</th>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td>1</td>  <!-- PTS -->
+                  <td>1</td>   <!-- PJ -->
+                  <td>1</td>   <!-- PG -->
+                  <td>1</td>   <!-- PP -->
+                  <td>1</td>   <!-- SF -->
+                  <td>1</td>   <!-- SC -->
+                  <td>1</td>   <!-- DS -->
+                  <td>1</td>   <!-- GF -->
+                  <td>1</td>   <!-- GC -->
+                  <td>1</td>   <!-- DG -->
                 </tr>
                 <!-- Agrega más filas según sea necesario -->
               </tbody>
@@ -207,13 +225,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Jugador 1</td>
+                        <td>Gustavo Adalberto Yarce</td>
                         <td class="text-center align-middle" scope="row" rowspan="2">W.O.</td>
-                        <td>Jugador 3</td>
+                        <td>David Benavidez</td>
                     </tr>
                     <tr>
-                        <td>Jugador 2</td>
-                        <td>Jugador 4</td>
+                        <td>Alejandro Dachary</td>
+                        <td>Ernesto Klimovsky</td>
                     </tr>
                 </tbody>
                 <thead>
@@ -225,17 +243,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Jugador 5</td>
+                        <td>Francisco Sala</td>
                         <td class="text-center align-middle" scope="row" rowspan="2">0 - 0<br>0 - 0</td>
-                        <td>Jugador 7</td>
+                        <td>Mariano Benetti</td>
                     </tr>
                     <tr>
-                        <td>Jugador 6</td>
-                        <td>Jugador 8</td>
+                        <td>Tito Rufiné</td>
+                        <td>Pepe Frund</td>
                     </tr>
                 </tbody>
             </table>
           </div>
+          <p class="card-text">
+            <small class="text-muted">
+              PG: Partidos Ganados<br>
+              PP: Partidos Perdidos<br>
+              SF: Sets a Favor<br>
+              SC: Sets en Contra<br>
+              DS: Diferencia de Sets<br>
+              GF: Games a Favor<br>
+              GC: Games en Contra<br>
+              DG: Diferencia de Games<br>
+            </small>
+          </p>
         </div>
       </div>
 
