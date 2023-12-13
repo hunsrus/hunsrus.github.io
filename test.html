@@ -159,189 +159,366 @@
 
       <!-- Clasificación -->
       <div class="card mb-4" id="clasificacion">
-        <h3 class="card-header">
-          <div class="mb-2"> Clasificación </div>
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Zona A</a>
+        <div class="mb-2 card-header">
+          <h3>Clasificación</h3>
+          <ul class="nav nav-tabs card-header-tabs nav-fill" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="za-tab" data-bs-toggle="tab" data-bs-target="#za-tab-pane" type="button" role="tab" aria-controls="za-tab-pane" aria-selected="true">Zona A</button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Zona B</a>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="zb-tab" data-bs-toggle="tab" data-bs-target="#zb-tab-pane" type="button" role="tab" aria-controls="zb-tab-pane" aria-selected="false">Zona B</button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Zona C</a>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="zc-tab" data-bs-toggle="tab" data-bs-target="#zc-tab-pane" type="button" role="tab" aria-controls="zc-tab-pane" aria-selected="false">Zona C</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="zx-tab" data-bs-toggle="tab" data-bs-target="#zx-tab-pane" type="button" role="tab" aria-controls="zx-tab-pane" aria-selected="false" disabled>Zona X</button>
             </li>
           </ul>
-        </h3>
-        <div class="card-body">
-          <h3 class="card-title">Posiciones</h3>
-          <div class="overflow-auto">
-            <table class="table table-striped text-center align-middle table-bordered">
-              <thead class="table-dark">
-                <tr>
-                  <th scope="col">Pareja</th>
-                  <th scope="col">PTS</th>
-                  <th scope="col">PJ</th>
-                  <th scope="col">PG</th>
-                  <th scope="col">PP</th>
-                  <th scope="col">SF</th>
-                  <th scope="col">SC</th>
-                  <th scope="col">DS</th>
-                  <th scope="col">GF</th>
-                  <th scope="col">GC</th>
-                  <th scope="col">DG</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <div class="text-nowrap">
-                      Gustavo Adalberto Yarce<hr>
-                      Alejandro Dachary
-                    </div>
-                  </th>
-                  <td>1</td>  <!-- PTS -->
-                  <td>2</td>   <!-- PJ -->
-                  <td>3</td>   <!-- PG -->
-                  <td>4</td>   <!-- PP -->
-                  <td>5</td>   <!-- SF -->
-                  <td>6</td>   <!-- SC -->
-                  <td>7</td>   <!-- DS -->
-                  <td>8</td>   <!-- GF -->
-                  <td>9</td>   <!-- GC -->
-                  <td>10</td>   <!-- DG -->
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div class="text-nowrap">
-                      David Benavidez<hr>
-                      Ernesto Klimovsky
-                    </div>
-                  </th>
-                  <td>0</td>  <!-- PTS -->
-                  <td>0</td>   <!-- PJ -->
-                  <td>0</td>   <!-- PG -->
-                  <td>0</td>   <!-- PP -->
-                  <td>0</td>   <!-- SF -->
-                  <td>0</td>   <!-- SC -->
-                  <td>0</td>   <!-- DS -->
-                  <td>0</td>   <!-- GF -->
-                  <td>0</td>   <!-- GC -->
-                  <td>0</td>   <!-- DG -->
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div class="text-nowrap">
-                      Francisco Sala<hr>
-                      Tito Rufiné
-                    </div>
-                  </th>
-                  <td>1</td>  <!-- PTS -->
-                  <td>1</td>   <!-- PJ -->
-                  <td>1</td>   <!-- PG -->
-                  <td>1</td>   <!-- PP -->
-                  <td>1</td>   <!-- SF -->
-                  <td>1</td>   <!-- SC -->
-                  <td>1</td>   <!-- DS -->
-                  <td>1</td>   <!-- GF -->
-                  <td>1</td>   <!-- GC -->
-                  <td>1</td>   <!-- DG -->
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div class="text-nowrap">
-                      Pepe Frund<hr>
-                      Mariano Benetti
-                    </div>
-                  </th>
-                  <td>2</td>  <!-- PTS -->
-                  <td>2</td>   <!-- PJ -->
-                  <td>2</td>   <!-- PG -->
-                  <td>2</td>   <!-- PP -->
-                  <td>2</td>   <!-- SF -->
-                  <td>2</td>   <!-- SC -->
-                  <td>2</td>   <!-- DS -->
-                  <td>2</td>   <!-- GF -->
-                  <td>2</td>   <!-- GC -->
-                  <td>2</td>   <!-- DG -->
-                </tr>
-                <!-- Agrega más filas según sea necesario -->
-              </tbody>
-            </table>
-          </div>
-          <!-- Partidos -->
-          <h3 class="card-title">Partidos</h3>
-          <div class="overflow-auto">
-            <table class="table table-striped text-center align-middle table-bordered">
-                <thead>
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <!-- --------------------ZONA A-------------------- -->
+          <div class="tab-pane fade show active" id="za-tab-pane" role="tabpanel" aria-labelledby="za-tab" tabindex="0">
+            <div class="card-body">
+              <h3 class="card-title">Posiciones</h3>
+              <div class="overflow-auto">
+                <table class="table table-striped text-center align-middle table-bordered">
+                  <thead class="table-dark">
                     <tr>
-                        <th scope="col">Pareja 1</th>
-                        <th scope="col">Resultado</th>
-                        <th scope="col">Pareja 2</th>
+                      <th scope="col">Pareja</th>
+                      <th scope="col">PTS</th>
+                      <th scope="col">PJ</th>
+                      <th scope="col">PG</th>
+                      <th scope="col">PP</th>
+                      <th scope="col">SF</th>
+                      <th scope="col">SC</th>
+                      <th scope="col">DS</th>
+                      <th scope="col">GF</th>
+                      <th scope="col">GC</th>
+                      <th scope="col">DG</th>
                     </tr>
-                </thead>
-                <tbody>
+                  </thead>
+                  <tbody>
                     <tr>
-                      <td>
+                      <th scope="row">
                         <div class="text-nowrap">
                           Gustavo Adalberto Yarce<hr>
                           Alejandro Dachary
                         </div>
-                      </td>
-                      <td>
-                        W.O.
-                      </td>
-                      <td>
+                      </th>
+                      <td>1</td>  <!-- PTS -->
+                      <td>2</td>   <!-- PJ -->
+                      <td>3</td>   <!-- PG -->
+                      <td>4</td>   <!-- PP -->
+                      <td>5</td>   <!-- SF -->
+                      <td>6</td>   <!-- SC -->
+                      <td>7</td>   <!-- DS -->
+                      <td>8</td>   <!-- GF -->
+                      <td>9</td>   <!-- GC -->
+                      <td>10</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
                         <div class="text-nowrap">
                           David Benavidez<hr>
                           Ernesto Klimovsky
                         </div>
-                      </td>
+                      </th>
+                      <td>0</td>  <!-- PTS -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
-                </tbody>
-                <thead>
-                  <tr>
-                      <th scope="col">Pareja 3</th>
-                      <th scope="col">Resultado</th>
-                      <th scope="col">Pareja 4</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td>
-                      <div class="text-nowrap">
-                        Francisco Sala<hr>
-                        Tito Rufiné
-                      </div>
-                    </td>
-                    <td>
-                      0-0<br>
-                      0-0<br>
-                      0-0<br>
-                    </td>
-                    <td>
-                      <div class="text-nowrap">
-                        Pepe Frund<hr>
-                        Mariano Benetti
-                      </div>
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Francisco Sala<hr>
+                          Tito Rufiné
+                        </div>
+                      </th>
+                      <td>1</td>  <!-- PTS -->
+                      <td>1</td>   <!-- PJ -->
+                      <td>1</td>   <!-- PG -->
+                      <td>1</td>   <!-- PP -->
+                      <td>1</td>   <!-- SF -->
+                      <td>1</td>   <!-- SC -->
+                      <td>1</td>   <!-- DS -->
+                      <td>1</td>   <!-- GF -->
+                      <td>1</td>   <!-- GC -->
+                      <td>1</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Pepe Frund<hr>
+                          Mariano Benetti
+                        </div>
+                      </th>
+                      <td>2</td>  <!-- PTS -->
+                      <td>2</td>   <!-- PJ -->
+                      <td>2</td>   <!-- PG -->
+                      <td>2</td>   <!-- PP -->
+                      <td>2</td>   <!-- SF -->
+                      <td>2</td>   <!-- SC -->
+                      <td>2</td>   <!-- DS -->
+                      <td>2</td>   <!-- GF -->
+                      <td>2</td>   <!-- GC -->
+                      <td>2</td>   <!-- DG -->
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- Partidos -->
+              <h3 class="card-title">Partidos</h3>
+              <div class="overflow-auto">
+                <table class="table table-striped text-center align-middle table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Pareja 1</th>
+                            <th scope="col">Resultado</th>
+                            <th scope="col">Pareja 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>
+                            <div class="text-nowrap">
+                              Gustavo Adalberto Yarce<hr>
+                              Alejandro Dachary
+                            </div>
+                          </td>
+                          <td>
+                            W.O.
+                          </td>
+                          <td>
+                            <div class="text-nowrap">
+                              David Benavidez<hr>
+                              Ernesto Klimovsky
+                            </div>
+                          </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                          <th scope="col">Pareja 3</th>
+                          <th scope="col">Resultado</th>
+                          <th scope="col">Pareja 4</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>
+                          <div class="text-nowrap">
+                            Francisco Sala<hr>
+                            Tito Rufiné
+                          </div>
+                        </td>
+                        <td>
+                          0-0<br>
+                          0-0<br>
+                          0-0<br>
+                        </td>
+                        <td>
+                          <div class="text-nowrap">
+                            Pepe Frund<hr>
+                            Mariano Benetti
+                          </div>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          <p class="card-text">
-            <small class="text-muted">
-              PG: Partidos Ganados<br>
-              PP: Partidos Perdidos<br>
-              SF: Sets a Favor<br>
-              SC: Sets en Contra<br>
-              DS: Diferencia de Sets<br>
-              GF: Games a Favor<br>
-              GC: Games en Contra<br>
-              DG: Diferencia de Games<br>
-            </small>
-          </p>
+          <!-- --------------------ZONA B-------------------- -->
+          <div class="tab-pane fade" id="zb-tab-pane" role="tabpanel" aria-labelledby="zb-tab" tabindex="0">
+            <div class="card-body">
+              <h3 class="card-title">Posiciones</h3>
+              <div class="overflow-auto">
+                <table class="table table-striped text-center align-middle table-bordered">
+                  <thead class="table-dark">
+                    <tr>
+                      <th scope="col">Pareja</th>
+                      <th scope="col">PTS</th>
+                      <th scope="col">PJ</th>
+                      <th scope="col">PG</th>
+                      <th scope="col">PP</th>
+                      <th scope="col">SF</th>
+                      <th scope="col">SC</th>
+                      <th scope="col">DS</th>
+                      <th scope="col">GF</th>
+                      <th scope="col">GC</th>
+                      <th scope="col">DG</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Sergio Pañoni<hr>
+                          Francisco Nardea
+                        </div>
+                      </th>
+                      <td>1</td>  <!-- PTS -->
+                      <td>2</td>   <!-- PJ -->
+                      <td>3</td>   <!-- PG -->
+                      <td>4</td>   <!-- PP -->
+                      <td>5</td>   <!-- SF -->
+                      <td>6</td>   <!-- SC -->
+                      <td>7</td>   <!-- DS -->
+                      <td>8</td>   <!-- GF -->
+                      <td>9</td>   <!-- GC -->
+                      <td>10</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Carlos Cappelletti<hr>
+                          Fernando Rafael Filipuzzi
+                        </div>
+                      </th>
+                      <td>0</td>  <!-- PTS -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Sergio Burgos<hr>
+                          Sebastián Vicario
+                        </div>
+                      </th>
+                      <td>1</td>  <!-- PTS -->
+                      <td>1</td>   <!-- PJ -->
+                      <td>1</td>   <!-- PG -->
+                      <td>1</td>   <!-- PP -->
+                      <td>1</td>   <!-- SF -->
+                      <td>1</td>   <!-- SC -->
+                      <td>1</td>   <!-- DS -->
+                      <td>1</td>   <!-- GF -->
+                      <td>1</td>   <!-- GC -->
+                      <td>1</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Gustavo Maggiolo<hr>
+                          Raúl Manuel Caballero
+                        </div>
+                      </th>
+                      <td>2</td>  <!-- PTS -->
+                      <td>2</td>   <!-- PJ -->
+                      <td>2</td>   <!-- PG -->
+                      <td>2</td>   <!-- PP -->
+                      <td>2</td>   <!-- SF -->
+                      <td>2</td>   <!-- SC -->
+                      <td>2</td>   <!-- DS -->
+                      <td>2</td>   <!-- GF -->
+                      <td>2</td>   <!-- GC -->
+                      <td>2</td>   <!-- DG -->
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- Partidos -->
+              <h3 class="card-title">Partidos</h3>
+              <div class="overflow-auto">
+                <table class="table table-striped text-center align-middle table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Pareja 1</th>
+                            <th scope="col">Resultado</th>
+                            <th scope="col">Pareja 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>
+                            <div class="text-nowrap">
+                              Sergio Pañoni<hr>
+                              Francisco Nardea
+                            </div>
+                          </td>
+                          <td>
+                            W.O.
+                          </td>
+                          <td>
+                            <div class="text-nowrap">
+                              Carlos Cappelletti<hr>
+                              Fernando Rafael Filipuzzi
+                            </div>
+                          </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                          <th scope="col">Pareja 3</th>
+                          <th scope="col">Resultado</th>
+                          <th scope="col">Pareja 4</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>
+                          <div class="text-nowrap">
+                            Sergio Burgos<hr>
+                            Sebastián Vicario
+                          </div>
+                        </td>
+                        <td>
+                          0-0<br>
+                          0-0<br>
+                          0-0<br>
+                        </td>
+                        <td>
+                          <div class="text-nowrap">
+                            Gustavo Maggiolo<hr>
+                            Raúl Manuel Caballero
+                          </div>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------ZONA C-------------------- -->
+          <div class="tab-pane fade" id="zc-tab-pane" role="tabpanel" aria-labelledby="zc-tab" tabindex="0">
+            AEEA
+          </div>
+          <!-- --------------------ZONA X-------------------- -->
+          <div class="tab-pane fade" id="zx-tab-pane" role="tabpanel" aria-labelledby="zx-tab" tabindex="0">
+            ZX
+          </div>
         </div>
+        <hr>
+        <p class="card-text ms-3 mb-2">
+          <small class="text-muted">
+            PG: Partidos Ganados<br>
+            PP: Partidos Perdidos<br>
+            SF: Sets a Favor<br>
+            SC: Sets en Contra<br>
+            DS: Diferencia de Sets<br>
+            GF: Games a Favor<br>
+            GC: Games en Contra<br>
+            DG: Diferencia de Games<br>
+          </small>
+        </p>
       </div>
 
       <div class="card mb-4" id="llave">
