@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="gray">
+<html lang="es" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,14 +26,16 @@
         --bs-body-color-rgb: #37BBF3;
         --bs-body-bg: #37BBF3;
         --bs-body-bg-rgb: #37BBF3;
+      }
 
+      body {
+        background-color: #F36F37;
       }
 
     }
 
     body {
-      /*background-color: #f8f9fa;*/
-      background-color: #F36F37;
+      background-color: #f8f9fa;
     }
     .card {
       border-radius: 15px;
@@ -84,17 +86,17 @@
       </div>
 
       <!-- Botones -->
-      <div class="row mt-4 mb-2 mx-auto">
-        <div class="col-md-3">
+      <div class="row mt-4 mb-4 text-center">
+        <div class="col">
           <button class="btn btn-info btn-block">Inscriptos</button>
         </div>
-        <div class="col-md-3">
+        <div class="col">
           <button class="btn btn-info btn-block">Horarios</button>
         </div>
-        <div class="col-md-3">
+        <div class="col">
           <button class="btn btn-info btn-block">Clasificación</button>
         </div>
-        <div class="col-md-3">
+        <div class="col">
           <button class="btn btn-info btn-block">Llave final</button>
         </div>
       </div>
@@ -106,7 +108,7 @@
           </h3>
           <div class="card-body">
               <table class="table text-center table-color2 table-sm table-bordered">
-                  <thead class="thead-dark">
+                  <thead class="table-dark">
                       <tr>
                           <th scope="col">#</th>
                           <th scope="col">Jugadores</th>
@@ -153,7 +155,7 @@
           <h3 class="card-title">Posiciones</h3>
           <div class="overflow-auto">
             <table class="table text-center table-bordered">
-              <thead class="thead-dark">
+              <thead class="table-dark">
                 <tr>
                   <th scope="col">Pareja</th>
                   <th scope="col">PTS</th>
