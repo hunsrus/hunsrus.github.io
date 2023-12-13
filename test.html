@@ -51,9 +51,13 @@
         display: inline-block;
         white-space: nowrap
     }
+    
     .table-color2 tr:nth-child(4n+1), .table-color2 tr:nth-child(4n+2) {
-     background: #95fce6;
+      background-color: #95fce6;
     }
+
+    hr { margin-top: 4px; margin-bottom: 4px }
+    
   </style>
   <title>Torneo Elías Metz 2023</title>
 </head>
@@ -107,7 +111,7 @@
             Jugadores Inscriptos
           </h3>
           <div class="card-body">
-              <table class="table text-center table-color2 table-sm table-bordered">
+            <table class="table table-striped text-center align-middle table-bordered">
                   <thead class="table-dark">
                       <tr>
                           <th scope="col">#</th>
@@ -117,28 +121,36 @@
                   </thead>
                   <tbody>
                       <tr>
-                          <td class="text-center align-middle" scope="row" rowspan="2">1</td>
-                          <td>Jugador 1</td>
-                          <td class="text-center align-middle" scope="row" rowspan="2">A</td>
+                        <td>1</td>
+                        <td>
+                          Jugador 1<hr>
+                          Jugador 2
+                        </td>
+                        <td>A</td>
                       </tr>
                       <tr>
-                          <td>Jugador 2</td>
+                        <td>2</td>
+                        <td>
+                          Jugador 2<hr>
+                          Jugador 3
+                        </td>
+                        <td>A</td>
                       </tr>
                       <tr>
-                          <td class="text-center align-middle" scope="row" rowspan="2">2</td>
-                          <td>Jugador 3</td>
-                          <td class="text-center align-middle" scope="row" rowspan="2">A</td>
+                        <td>3</td>
+                        <td>
+                          Jugador 4<hr>
+                          Jugador 5
+                        </td>
+                        <td>B</td>
                       </tr>
                       <tr>
-                          <td>Jugador 4</td>
-                      </tr>
-                      <tr>
-                          <td class="text-center align-middle" scope="row" rowspan="2">3</td>
-                          <td>Jugador 5</td>
-                          <td class="text-center align-middle" scope="row" rowspan="2">B</td>
-                      </tr>
-                      <tr>
-                          <td>Jugador 6</td>
+                        <td>4</td>
+                        <td>
+                          Jugador 6<hr>
+                          Jugador 7
+                        </td>
+                        <td>B</td>
                       </tr>
                       <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -149,12 +161,23 @@
       <!-- Clasificación -->
       <div class="card mb-4">
         <h3 class="card-header">
-          Clasificación
+          <div class="mb-2"> Clasificación </div>
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Zona A</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Zona B</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Zona C</a>
+            </li>
+          </ul>
         </h3>
         <div class="card-body">
           <h3 class="card-title">Posiciones</h3>
           <div class="overflow-auto">
-            <table class="table text-center table-bordered">
+            <table class="table table-striped text-center align-middle table-bordered">
               <thead class="table-dark">
                 <tr>
                   <th scope="col">Pareja</th>
@@ -172,7 +195,12 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Gustavo Adalberto Yarce<br>Alejandro Dachary</th>
+                  <th scope="row">
+                    <div class="text-nowrap">
+                      Gustavo Adalberto Yarce<hr>
+                      Alejandro Dachary
+                    </div>
+                  </th>
                   <td>1</td>  <!-- PTS -->
                   <td>2</td>   <!-- PJ -->
                   <td>3</td>   <!-- PG -->
@@ -185,7 +213,12 @@
                   <td>10</td>   <!-- DG -->
                 </tr>
                 <tr>
-                  <th scope="row">Jugador 3<br>Jugador 4</th>
+                  <th scope="row">
+                    <div class="text-nowrap">
+                      David Benavidez<hr>
+                      Ernesto Klimovsky
+                    </div>
+                  </th>
                   <td>0</td>  <!-- PTS -->
                   <td>0</td>   <!-- PJ -->
                   <td>0</td>   <!-- PG -->
@@ -198,7 +231,12 @@
                   <td>0</td>   <!-- DG -->
                 </tr>
                 <tr>
-                  <th scope="row">Jugador 5<br>Jugador 6</th>
+                  <th scope="row">
+                    <div class="text-nowrap">
+                      Francisco Sala<hr>
+                      Tito Rufiné
+                    </div>
+                  </th>
                   <td>1</td>  <!-- PTS -->
                   <td>1</td>   <!-- PJ -->
                   <td>1</td>   <!-- PG -->
@@ -210,6 +248,24 @@
                   <td>1</td>   <!-- GC -->
                   <td>1</td>   <!-- DG -->
                 </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="text-nowrap">
+                      Pepe Frund<hr>
+                      Mariano Benetti
+                    </div>
+                  </th>
+                  <td>2</td>  <!-- PTS -->
+                  <td>2</td>   <!-- PJ -->
+                  <td>2</td>   <!-- PG -->
+                  <td>2</td>   <!-- PP -->
+                  <td>2</td>   <!-- SF -->
+                  <td>2</td>   <!-- SC -->
+                  <td>2</td>   <!-- DS -->
+                  <td>2</td>   <!-- GF -->
+                  <td>2</td>   <!-- GC -->
+                  <td>2</td>   <!-- DG -->
+                </tr>
                 <!-- Agrega más filas según sea necesario -->
               </tbody>
             </table>
@@ -217,7 +273,7 @@
           <!-- Partidos -->
           <h3 class="card-title">Partidos</h3>
           <div class="overflow-auto">
-            <table class="table text-center table-bordered">
+            <table class="table table-striped text-center align-middle table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">Pareja 1</th>
@@ -227,33 +283,51 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Gustavo Adalberto Yarce</td>
-                        <td class="text-center align-middle" scope="row" rowspan="2">W.O.</td>
-                        <td>David Benavidez</td>
-                    </tr>
-                    <tr>
-                        <td>Alejandro Dachary</td>
-                        <td>Ernesto Klimovsky</td>
+                      <td>
+                        <div class="text-nowrap">
+                          Gustavo Adalberto Yarce<hr>
+                          Alejandro Dachary
+                        </div>
+                      </td>
+                      <td>
+                        W.O.
+                      </td>
+                      <td>
+                        <div class="text-nowrap">
+                          David Benavidez<hr>
+                          Ernesto Klimovsky
+                        </div>
+                      </td>
                     </tr>
                 </tbody>
                 <thead>
-                    <tr>
-                        <th scope="col">Pareja 3</th>
-                        <th scope="col">Resultado</th>
-                        <th scope="col">Pareja 4</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Francisco Sala</td>
-                        <td class="text-center align-middle" scope="row" rowspan="2">0 - 0<br>0 - 0</td>
-                        <td>Mariano Benetti</td>
-                    </tr>
-                    <tr>
-                        <td>Tito Rufiné</td>
-                        <td>Pepe Frund</td>
-                    </tr>
-                </tbody>
+                  <tr>
+                      <th scope="col">Pareja 3</th>
+                      <th scope="col">Resultado</th>
+                      <th scope="col">Pareja 4</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>
+                      <div class="text-nowrap">
+                        Francisco Sala<hr>
+                        Tito Rufiné
+                      </div>
+                    </td>
+                    <td>
+                      0-0<br>
+                      0-0<br>
+                      0-0<br>
+                    </td>
+                    <td>
+                      <div class="text-nowrap">
+                        Pepe Frund<hr>
+                        Mariano Benetti
+                      </div>
+                    </td>
+                  </tr>
+              </tbody>
             </table>
           </div>
           <p class="card-text">
