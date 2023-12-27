@@ -1900,7 +1900,7 @@
       </div>
 
       <div class="card border-primary mb-4" id="llave">
-        <h3 class="card-header text-white bg-primary">
+        <h3 id="test" class="card-header text-white bg-primary">
             Llave final
         </h3>
         <div class="card-body scrollable-card">
@@ -1980,7 +1980,15 @@
     elemento.textContent = "Bergna/Galeano G.";
 
     elemento = myIFrame.getElementById("octavos-l1-r");
-    var data = "<div class=\"knockscore\"><a class=\"\">5</a></div><div class=\"knockscore\"><a class=\"\">4</a></div><div class=\"knockscore\"><a class=\"\">3</a></div>";
+    var data = "<div class=\"knockscore\">\
+                    <a class=\"\">5</a>\
+                </div>\
+                <div class=\"knockscore\">\
+                    <a class=\"\">4</a>\
+                </div>\
+                <div class=\"knockscore\">\
+                    <a class=\"\">3</a>\
+                </div>";
     elemento.innerHtml = data;
     //myIFrame.getElementById("octavos-l1-r").innerHTML = "<div class="knockscore"><a class="">AEEA</a></div>";
   }
