@@ -1972,29 +1972,20 @@
   function set_text()
   {
     var myIFrame = document.getElementById('bracket-iframe').contentWindow.document;
-    var elemento = myIFrame.getElementById("llave1-equipo1");
-    console.log(elemento);
-    elemento.textContent = "Hola, este es un texto agregado desde JavaScript.";
+
+    var elemento = myIFrame.getElementById("octavos-l1-e1");
+    elemento.textContent = "Enrico/Carponi";
+
+    elemento = myIFrame.getElementById("octavos-l1-e2");
+    elemento.textContent = "Bergna/Galeano G.";
+
+    elemento = myIFrame.getElementById("octavos-l1-r");
+    myIFrame.getElementById("octavos-l1-r").innerHTML=
+    <div class="knockscore">
+        <a class="">AEEA</a>
+    </div>
+    ;
   }
-
-  //function get_iframe(ifr_id) {
-    // gets the object that refers to the iframe, uasing its id
-    
-
-    // Apply the property "contentWindow" to myIFrame object
-    // In this way we get the iframe content
-    //var content = myIFrame.contentWindow.document.body.innerHTML;
-    //var elemento = myIFrame.contentWindow.document.getElementById("llave1-equipo1");
-    
-    
-    //alert("Content: \n" + content); // Displays an Alert with the data from iframe
-    
-    // Define a new text that will replace the content of the iframe
-    //content = '<font color="blue">Text added with Javascript, from the main page</font>';
-
-    // Modify the iframe content
-    //myIFrame.contentWindow.document.body.innerHTML = content;
-  //}
 
 </script>
 
