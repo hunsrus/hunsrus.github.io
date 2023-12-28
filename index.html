@@ -1904,9 +1904,9 @@
             Llave final
         </h3>
         <div class="card-body scrollable-card">
-
+          
           <iframe src="bracket.html" onload="set_text()" id="bracket-iframe" width="1000" height="400" frameborder="0" class="overflow-auto"></iframe>
-
+          
           <!--
           <div class="my_gracket overflow-auto"></div>
           -->
@@ -1973,12 +1973,95 @@
   {
     var myIFrame = document.getElementById('bracket-iframe').contentWindow.document;
 
-    var elemento = myIFrame.getElementById("octavos-l1-e1");
+    // Octavos llave 1
+    var elemento = myIFrame.getElementById("O-L1-P1");
     elemento.textContent = "Enrico/Carponi";
 
-    elemento = myIFrame.getElementById("octavos-l1-e2");
-    elemento.textContent = "Bergna/Galeano G. aeea?";
+    elemento = myIFrame.getElementById("O-L1-P2");
+    elemento.textContent = "Bergna/Galeano G.";
 
+    elemento = myIFrame.getElementById("O-L1-F");
+    elemento.textContent = "Sábado 30/12 - 11hs";
+    // Octavos llave 2
+    elemento = myIFrame.getElementById("O-L2-P1");
+    elemento.textContent = "Vittori L/Barón";
+
+    elemento = myIFrame.getElementById("O-L2-P2");
+    elemento.textContent = "Rodriguez/Goró";
+
+    elemento = myIFrame.getElementById("O-L2-F");
+    elemento.textContent = "Sábado 30/12 - 11hs";
+    // Octavos llave 3
+    elemento = myIFrame.getElementById("O-L3-P1");
+    elemento.textContent = "Vittori A./Albarracín O.";
+
+    elemento = myIFrame.getElementById("O-L3-P2");
+    elemento.textContent = "Albarracín F./Aguilar";
+
+    elemento = myIFrame.getElementById("O-L3-F");
+    elemento.textContent = "Sábado 30/12 - 11hs";
+
+    // Octavos llave 4
+    elemento = myIFrame.getElementById("O-L4-P1");
+    elemento.textContent = "Pertus/Galeano D.";
+
+    elemento = myIFrame.getElementById("O-L4-P2");
+    elemento.textContent = "Gauna/Donda";
+
+    elemento = myIFrame.getElementById("O-L4-F");
+    elemento.textContent = "Horario a coordinar";
+
+    // Octavos llave 5
+    elemento = myIFrame.getElementById("O-L5-P1");
+    elemento.textContent = "Pertus/Galeano D.";
+
+    elemento = myIFrame.getElementById("O-L5-P2");
+    elemento.textContent = "Gauna/Donda";
+
+    elemento = myIFrame.getElementById("O-L5-F");
+    elemento.textContent = "Sábado 30/12 - 12:15hs";
+
+    // Octavos llave 6
+    elemento = myIFrame.getElementById("O-L6-P1");
+    elemento.textContent = "Gaztelumendi/Villagra";
+
+    elemento = myIFrame.getElementById("O-L6-P2");
+    elemento.textContent = "Diaz/Vergara";
+
+    elemento = myIFrame.getElementById("O-L6-F");
+    elemento.textContent = "Sábado 30/12 - 12:15hs";
+
+    // Octavos llave 7
+    elemento = myIFrame.getElementById("O-L7-P1");
+    elemento.textContent = "Botto/Adra";
+
+    elemento = myIFrame.getElementById("O-L7-P2");
+    elemento.textContent = "Fernandez J./Martínez L.";
+
+    elemento = myIFrame.getElementById("O-L7-F");
+    elemento.textContent = "Sábado 30/12 - 12:15hs";
+
+    // Octavos llave 8
+    elemento = myIFrame.getElementById("O-L8-P1");
+    elemento.textContent = "Martínez L./Terra";
+
+    elemento = myIFrame.getElementById("O-L8-P2");
+    elemento.textContent = "Aguirre/Fernandez K.";
+
+    elemento = myIFrame.getElementById("O-L8-F");
+    elemento.textContent = "Sábado 30/12 - 12:15hs";
+
+    // Octavos llave 9
+    elemento = myIFrame.getElementById("O-L9-P1");
+    elemento.textContent = "Corbalán/Langhi";
+
+    elemento = myIFrame.getElementById("O-L9-P2");
+    elemento.textContent = "Vallejo/Hutin";
+
+    elemento = myIFrame.getElementById("O-L9-F");
+    elemento.textContent = "Sábado 30/12 - 12:15hs";
+
+    /*
     elemento = myIFrame.getElementById("octavos-l1-r");
     var data = "<div class=\"knockscore\">\
                     <a class=\"\">5</a>\
@@ -1990,6 +2073,7 @@
                     <a class=\"\">3</a>\
                 </div>";
     elemento.innerHTML = data;
+    */
     //myIFrame.getElementById("octavos-l1-r").innerHTML = "<div class="knockscore"><a class="">AEEA</a></div>";
   }
 
