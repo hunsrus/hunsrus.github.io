@@ -17,9 +17,9 @@ html {
     font-size: 14px;
   }
 }
-@media (min-width: 52em) {
+@media (min-width: 1em) {
   html {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
 @media (min-width: 72em) {
