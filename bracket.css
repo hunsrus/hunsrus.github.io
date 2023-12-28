@@ -10,21 +10,21 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 15px;
+  font-size: 5px;
 }
 @media (min-width: 38em) {
   html {
-    font-size: 14px;
+    font-size: 8px;
   }
 }
-@media (min-width: 1em) {
+@media (min-width: 52em) {
   html {
     font-size: 10px;
   }
 }
 @media (min-width: 72em) {
   html {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 body {
@@ -33,7 +33,7 @@ body {
 .container {
   width: 90%;
   min-width: 18em;
-  margin: 20px auto;
+  /*margin: 20px auto;*/
 }
 h1,
 h2 {
