@@ -4,24 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!--
+
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="dist/jquery.bracket.min.js"></script>
   <link href="dist/jquery.bracket.min.css" rel="stylesheet">
-  -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+  crossorigin="anonymous"></script>
+	<script src="jquery.gracket.js"></script>
+  <link href="jquery.gracket.min.css" rel="stylesheet">
   
   <style>
-    @import 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&subset=latin-ext';
+    [data-bs-theme="gray"] {
+      --bs-body-color: #f8f9fa;
+      --bs-body-color-rgb: #f8f9fa;
+      --bs-body-bg: #4E565D;
+      --bs-body-bg-rgb: #4E565D;
+      --bs-tertiary-bg: #{$blue-600};
+
+      
+      .btn-info {
+        --bs-body-color: #37BBF3;
+        --bs-body-color-rgb: #37BBF3;
+        --bs-body-bg: #37BBF3;
+        --bs-body-bg-rgb: #37BBF3;
+      }
+
+      body {
+        background-color: #F36F37;
+      }
+
+    }
+
     body {
       background-color: #f8f9fa;
-      font-family: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
     }
     .card {
-      /*border-radius: 15px;*/
+      border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
@@ -46,31 +69,6 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <img class="me-2" src="logo-navbar.png" height="32" href="#">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#inscriptos">Inscriptos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#clasificacion">Clasificación</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#llave">Llave final</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#sponsors">Sponsors</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <div class="container">
   <div class="row">
     <div class="col-md-9 mx-auto">
@@ -78,13 +76,13 @@
       <!-- <h1 class="mb-4 text-center text-md-left">Torneo Elías Metz 2023</h1> -->
       
       <!-- Información del Torneo -->
-      <div class="card border-primary mb-4">
-        <h3 class="card-header text-white bg-primary">
+      <div class="card mb-4">
+        <h3 class="card-header">
             Información del torneo
           </h3>
         <div class="card-body">
           <ul class="list-group">
-            <li class="list-group-item text-center"><font size="+2">Torneo anual a beneficio de la Fundación Crisálida</font><img src="crisa.jpg" class="mx-auto d-block m-2 w-50"></li>
+            <li class="list-group-item"><font size="+2">Torneo anual a beneficio de la Fundación Crisálida</font><img src="crisa.jpg" class="mx-auto d-block m-2 w-50"></li>
             <li class="list-group-item"><b>Fecha:</b> 23 y 30 de diciembre de 2023</li>
             <li class="list-group-item"><b>Localidad:</b> Paraná</li>
             <li class="list-group-item"><b>Complejo:</b> Palermo Padel</li>
@@ -105,7 +103,7 @@
           <a class="btn btn-primary btn-block w-100" href="#clasificacion" role="button">Clasificación</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#llave" role="button" disabled>Llave final</a>
+          <a class="btn btn-primary btn-block w-100 disabled" href="#llave" role="button" disabled>Llave final</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
           <a class="btn btn-primary btn-block w-100" href="#sponsors" role="button">Sponsors</a>
@@ -113,8 +111,8 @@
       </div>
       
      <!-- Jugadores inscriptos -->
-      <div class="card border-primary mb-4" id="inscriptos">
-          <h3 class="card-header text-white bg-primary">
+      <div class="card mb-4" id="inscriptos">
+          <h3 class="card-header">
             Jugadores Inscriptos
           </h3>
           <div class="card-body">
@@ -127,6 +125,7 @@
                       </tr>
                   </thead>
                   <tbody>
+                      <!-- ZONA A -->
                       <tr>
                         <td>1</td>
                         <td>BERGNA, Juan de Dios</td>
@@ -137,11 +136,9 @@
                         <td>GALEANO, Georgina</td>
                         <td>B</td>
                       </tr>
-                      <tr>
                         <td>3</td>
                         <td>MOLLEVI, Juan Carlos</td>
                         <td>A</td>
-                      </tr>
                       <tr>
                         <td>4</td>
                         <td>GODOY, Daniel</td>
@@ -157,6 +154,7 @@
                         <td>VERGARA, Pedro</td>
                         <td>D</td>
                       </tr>
+                      <!-- ZONA B -->
                       <tr>
                         <td>7</td>
                         <td>VITTORI, Federico</td>
@@ -167,11 +165,9 @@
                         <td>FÁLICO, Gonzalo</td>
                         <td>H</td>
                       </tr>
-                      <tr>
                         <td>9</td>
                         <td>RODRIGUEZ, Gastón</td>
                         <td>H</td>
-                      </tr>
                       <tr>
                         <td>10</td>
                         <td>GORÓ, Agustín</td>
@@ -187,6 +183,7 @@
                         <td>DONDA, Joaquin</td>
                         <td>D</td>
                       </tr>
+                      <!-- ZONA C -->
                       <tr>
                         <td>13</td>
                         <td>BOTTO, Milton</td>
@@ -197,11 +194,9 @@
                         <td>ADRA, Elías</td>
                         <td>E</td>
                       </tr>
-                      <tr>
                         <td>15</td>
                         <td>VITTORI, Ariel</td>
                         <td>E</td>
-                      </tr>
                       <tr>
                         <td>16</td>
                         <td>ALBARRACIN, Oscar</td>
@@ -217,6 +212,7 @@
                         <td>BARÓN, Matias</td>
                         <td>G</td>
                       </tr>
+                      <!-- ZONA D -->
                       <tr>
                         <td>19</td>
                         <td>NUÑEZ, Facundo</td>
@@ -227,11 +223,9 @@
                         <td>MONTERO, Marcelo</td>
                         <td>E</td>
                       </tr>
-                      <tr>
                         <td>21</td>
                         <td>PERRETI, Marcos</td>
                         <td>B</td>
-                      </tr>
                       <tr>
                         <td>22</td>
                         <td>GONZALEZ LEITES, Fermin</td>
@@ -247,6 +241,7 @@
                         <td>VILLAGRA, Angel</td>
                         <td>C</td>
                       </tr>
+                      <!-- ZONA E -->
                       <tr>
                         <td>25</td>
                         <td>CARPONI, Javier</td>
@@ -257,11 +252,9 @@
                         <td>ENRICO, Julián</td>
                         <td>A</td>
                       </tr>
-                      <tr>
                         <td>27</td>
-                        <td>CORBALÁN, Diego</td>
+                        <td>CORVALAN, Diego</td>
                         <td>A</td>
-                      </tr>
                       <tr>
                         <td>28</td>
                         <td>LANGHI, Emiliano</td>
@@ -277,6 +270,7 @@
                         <td>FERNANDEZ, Kevin</td>
                         <td>H</td>
                       </tr>
+                      <!-- ZONA F -->
                       <tr>
                         <td>31</td>
                         <td>PERTUS, Dario</td>
@@ -287,11 +281,9 @@
                         <td>GALEANO, Diego</td>
                         <td>C</td>
                       </tr>
-                      <tr>
                         <td>33</td>
                         <td>VALLA, Luis</td>
                         <td>C</td>
-                      </tr>
                       <tr>
                         <td>34</td>
                         <td>CATALANO, Damián </td>
@@ -307,6 +299,7 @@
                         <td>AGUILAR, Marcelo</td>
                         <td>F</td>
                       </tr>
+                      <!-- ZONA G -->
                       <tr>
                         <td>37</td>
                         <td>MAIDANA, Jose</td>
@@ -317,11 +310,9 @@
                         <td>VEGA, Iván</td>
                         <td>F</td>
                       </tr>
-                      <tr>
                         <td>39</td>
                         <td>VALLEJO, Oski</td>
                         <td>B</td>
-                      </tr>
                       <tr>
                         <td>40</td>
                         <td>HUTIN, Guillermo</td>
@@ -337,6 +328,7 @@
                         <td>TERRA, Marcelo</td>
                         <td>G</td>
                       </tr>
+                      <!-- ZONA H -->
                       <tr>
                         <td>43</td>
                         <td>FERNANDEZ, José</td>
@@ -347,11 +339,9 @@
                         <td>MARTINEZ, Lautaro</td>
                         <td>F</td>
                       </tr>
-                      <tr>
                         <td>45</td>
                         <td>KRAWEZUC, Sergio</td>
                         <td>D</td>
-                      </tr>
                       <tr>
                         <td>46</td>
                         <td>RUFINE, Alberto</td>
@@ -374,33 +364,33 @@
       </div>
 
       <!-- Clasificación -->
-      <div class="card border-primary mb-4" id="clasificacion">
-        <div class="mb-2 card-header text-white bg-primary">
+      <div class="card mb-4" id="clasificacion">
+        <div class="mb-2 card-header">
           <h3>Clasificación</h3>
-          <ul class="nav nav-pills card-header-pills nav-fill" id="myTab" role="tablist">
+          <ul class="nav nav-tabs card-header-tabs nav-fill" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary active" id="za-tab" data-bs-toggle="tab" data-bs-target="#za-tab-pane" type="button" role="tab" aria-controls="za-tab-pane" aria-selected="true">Zona A</button>
+              <button class="nav-link active" id="za-tab" data-bs-toggle="tab" data-bs-target="#za-tab-pane" type="button" role="tab" aria-controls="za-tab-pane" aria-selected="true">Zona A</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zb-tab" data-bs-toggle="tab" data-bs-target="#zb-tab-pane" type="button" role="tab" aria-controls="zb-tab-pane" aria-selected="false">Zona B</button>
+              <button class="nav-link" id="zb-tab" data-bs-toggle="tab" data-bs-target="#zb-tab-pane" type="button" role="tab" aria-controls="zb-tab-pane" aria-selected="false">Zona B</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zc-tab" data-bs-toggle="tab" data-bs-target="#zc-tab-pane" type="button" role="tab" aria-controls="zc-tab-pane" aria-selected="false">Zona C</button>
+              <button class="nav-link" id="zc-tab" data-bs-toggle="tab" data-bs-target="#zc-tab-pane" type="button" role="tab" aria-controls="zc-tab-pane" aria-selected="false">Zona C</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zd-tab" data-bs-toggle="tab" data-bs-target="#zd-tab-pane" type="button" role="tab" aria-controls="zd-tab-pane" aria-selected="false">Zona D</button>
+              <button class="nav-link" id="zd-tab" data-bs-toggle="tab" data-bs-target="#zd-tab-pane" type="button" role="tab" aria-controls="zd-tab-pane" aria-selected="false">Zona D</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="ze-tab" data-bs-toggle="tab" data-bs-target="#ze-tab-pane" type="button" role="tab" aria-controls="ze-tab-pane" aria-selected="false">Zona E</button>
+              <button class="nav-link" id="ze-tab" data-bs-toggle="tab" data-bs-target="#ze-tab-pane" type="button" role="tab" aria-controls="ze-tab-pane" aria-selected="false">Zona E</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zf-tab" data-bs-toggle="tab" data-bs-target="#zf-tab-pane" type="button" role="tab" aria-controls="zf-tab-pane" aria-selected="false">Zona F</button>
+              <button class="nav-link" id="zf-tab" data-bs-toggle="tab" data-bs-target="#zf-tab-pane" type="button" role="tab" aria-controls="zf-tab-pane" aria-selected="false">Zona F</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zg-tab" data-bs-toggle="tab" data-bs-target="#zg-tab-pane" type="button" role="tab" aria-controls="zg-tab-pane" aria-selected="false">Zona G</button>
+              <button class="nav-link" id="zg-tab" data-bs-toggle="tab" data-bs-target="#zg-tab-pane" type="button" role="tab" aria-controls="zg-tab-pane" aria-selected="false">Zona G</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zh-tab" data-bs-toggle="tab" data-bs-target="#zh-tab-pane" type="button" role="tab" aria-controls="zh-tab-pane" aria-selected="false">Zona H</button>
+              <button class="nav-link" id="zh-tab" data-bs-toggle="tab" data-bs-target="#zh-tab-pane" type="button" role="tab" aria-controls="zh-tab-pane" aria-selected="false">Zona H</button>
             </li>
           </ul>
         </div>
@@ -429,83 +419,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-                          Enrico<hr>
-                          Carponi
-
-                          
-                        </div>
-                      </th>
-
-                             <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
-                      <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
-                      <td>1</td>   <!-- SC -->
-                      <td>+3</td>   <!-- DS -->
-                      <td>28</td>   <!-- GF -->
-                      <td>16</td>   <!-- GC -->
-                      <td>+12</td>   <!-- DG -->
-                      
-
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
-                          
-                          Corbalán<hr>
-                          Langhi
-
-
-                          
-                        </div>
-                      </th>
-
-                      
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>3</td>   <!-- SF -->
-                      <td>2</td>   <!-- SC -->
-                      <td>+1</td>   <!-- DS -->
-                      <td>24</td>   <!-- GF -->
-                      <td>21</td>   <!-- GC -->
-                      <td>+3</td>   <!-- DG -->
-
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
-
-                          
-                                                    
                           Mollevi<hr>
                           Godoy
-
-
-
-                          
                         </div>
                       </th>
-
-                      
-               
-
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
+                      <td>0</td>   <!-- PP -->
                       <td>0</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-4</td>   <!-- DS -->
-                      <td>9</td>   <!-- GF -->
-                      <td>24</td>   <!-- GC -->
-                      <td>-15</td>   <!-- DG -->
-
-                      
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Corvalán<hr>
+                          Langhi
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Enrico<hr>
+                          Carponi
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -532,20 +492,20 @@
                             </div>
                           </td>
                           <td>
-                            2-6<br>
-                            3-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 12:15
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Corbalán<hr>
-                              Langhi</b>
+                              Corvalán<hr>
+                              Langhi
                             </div>
                           </td>
                         </tr>
@@ -553,26 +513,25 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              Corbalán<hr>
+                              Corvalán<hr>
                               Langhi
                             </div>
                           </td>
                           <td>
-                            6-4<br>
-                            2-6<br>
-                            4-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 13:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Enrico<hr>
-                              Carponi</b>
+                              Enrico<hr>
+                              Carponi
                             </div>
                           </td>
                         </tr>
@@ -585,20 +544,20 @@
                             </div>
                           </td>
                           <td>
-                            2-6<br>
-                            2-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 14:45
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Enrico<hr>
-                              Carponi</b>
+                              Enrico<hr>
+                              Carponi
                             </div>
                           </td>
                         </tr>
@@ -632,70 +591,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-                          Vallejo<hr>
-                          Hutin
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
-                      <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
-                      <td>1</td>   <!-- SC -->
-                      <td>+1</td>   <!-- DS -->
-                      <td>28</td>   <!-- GF -->
-                      <td>19</td>   <!-- GC -->
-                      <td>+9</td>   <!-- DG -->
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
-
-                          
-                          
                           Bergna<hr>
                           Galeano G.
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>3</td>   <!-- SF -->
-                      <td>3</td>   <!-- SC -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
                       <td>0</td>   <!-- DS -->
-                      <td>27</td>   <!-- GF -->
-                      <td>32</td>   <!-- GC -->
-                      <td>-5</td>   <!-- DG -->
-
-                      
-
-
-                      
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
                           Perreti<hr>
                           G. Leites
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
-                      <td>1</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-3</td>   <!-- DS -->
-                      <td>22</td>   <!-- GF -->
-                      <td>26</td>   <!-- GC -->
-                      <td>-4</td>   <!-- DG -->
-                          
-                       
-
-
-                      
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Vallejo<hr>
+                          Hutin
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -717,21 +659,20 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Bergna<hr>
-                              Galeano G.</b>
+                              Bergna<hr>
+                              Galeano G.
                             </div>
                           </td>
                           <td>
-                            6-4<br>
-                            1-6<br>
-                            7-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 17:15
-                              </div>
-                              </font>
+                              <font>
+                            </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
@@ -749,21 +690,20 @@
                             </div>
                           </td>
                           <td>
-                            6-7<br>
-                            6-3<br>
-                            1-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 18:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Vallejo<hr>
-                              Hutin</b>
+                              Vallejo<hr>
+                              Hutin
                             </div>
                           </td>
                         </tr>
@@ -776,20 +716,20 @@
                             </div>
                           </td>
                           <td>
-                            3-6<br>
-                            3-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 19:45
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Vallejo<hr>
-                              Hutin</b>
+                              Vallejo<hr>
+                              Hutin
                             </div>
                           </td>
                         </tr>
@@ -823,72 +763,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-
-                          
-      
-       Gaztelumendi<hr>
-                          Villagra
+                          Valla<hr>
+                          Catalano
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
                       <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
+                      <td>0</td>   <!-- SF -->
                       <td>0</td>   <!-- SC -->
-                      <td>+4</td>   <!-- DS -->
-                      <td>24</td>   <!-- GF -->
-                      <td>8</td>   <!-- GC -->
-                      <td>+16</td>   <!-- DG -->
-
-
-                      
-                    </tr>    
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-
-
+                          Gaztelumendi<hr>
+                          Villagra
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
                           Pertus<hr>
                           Galeano D.
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>2</td>   <!-- SF -->
-                      <td>2</td>   <!-- SC -->
-                      <td>0</td>   <!-- DS -->
-                      <td>17</td>   <!-- GF -->
-                      <td>16</td>   <!-- GC -->
-                      <td>+1</td>   <!-- DG -->
-                   
-
-
-                      
-                    </tr>          
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
-                          
-                      Valla<hr>
-                          Catalano
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
+                      <td>0</td>   <!-- PP -->
                       <td>0</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-4</td>   <!-- DS -->
-                      <td>7</td>   <!-- GF -->
-                      <td>24</td>   <!-- GC -->
-                      <td>-17</td>   <!-- DG --
-
-
-                      
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -915,20 +836,20 @@
                             </div>
                           </td>
                           <td>
-                            1-6<br>
-                            2-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 17:15
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Gaztelumendi<hr>
-                              Villagra</b>
+                              Gaztelumendi<hr>
+                              Villagra
                             </div>
                           </td>
                         </tr>
@@ -936,19 +857,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Gaztelumendi<hr>
-                              Villagra</b>
+                              Gaztelumendi<hr>
+                              Villagra
                             </div>
                           </td>
                           <td>
-                            6-1<br>
-                            6-4<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 18:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -967,20 +888,20 @@
                             </div>
                           </td>
                           <td>
-                            2-6<br>
-                            2-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 19:45
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Pertus<hr>
-                              Galeano D.</b>
+                              Pertus<hr>
+                              Galeano D.
                             </div>
                           </td>
                         </tr>
@@ -1018,55 +939,50 @@
                           Donda
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
                       <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
-                      <td>1</td>   <!-- SC -->
-                      <td>+3</td>   <!-- DS -->
-                      <td>25</td>   <!-- GF -->
-                      <td>10</td>   <!-- GC -->
-                      <td>+15</td>   <!-- DG -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-                                  
+                          Krawezuc<hr>
+                          Rufiné
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
                           Diaz<hr>
                           Vergara
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>2</td>   <!-- SF -->
-                      <td>3</td>   <!-- SC -->
-                      <td>-1</td>   <!-- DS -->
-                      <td>17</td>   <!-- GF -->
-                      <td>24</td>   <!-- GC -->
-                      <td>-7</td>   <!-- DG -->
-                    </tr>
-                    
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-                          
-                  Krawezuc<hr>
-                          Rufiné
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
-                      <td>2</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-2</td>   <!-- DS -->
-                      <td>19</td>   <!-- GF -->
-                      <td>27</td>   <!-- GC -->
-                      <td>-8</td>   <!-- DG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
-                       
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
                 </table>
@@ -1092,21 +1008,20 @@
                             </div>
                           </td>
                           <td>
-                            5-7<br>
-                            6-1<br>
-                            1-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 14:45
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Diaz<hr>
-                              Vergara</b>
+                              Diaz<hr>
+                              Vergara
                             </div>
                           </td>
                         </tr>
@@ -1114,19 +1029,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Gauna<hr>
-                              Donda</b>
+                              Gauna<hr>
+                              Donda
                             </div>
                           </td>
                           <td>
-                            6-3<br>
-                            6-0<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 16:00
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1140,19 +1055,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Gauna<hr>
-                              Donda</b>
+                              Gauna<hr>
+                              Donda
                             </div>
                           </td>
                           <td>
-                            7-6<br>
-                            6-1<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 17:15
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1191,58 +1106,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-                           Vittori A.<hr>
-                          Albarracín O.
+                          Nuñez<hr>
+                          Montero
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
                       <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
-                      <td>2</td>   <!-- SC -->
-                      <td>+2</td>   <!-- DS -->
-                      <td>32</td>   <!-- GF -->
-                      <td>29</td>   <!-- GC -->
-                      <td>+3</td>   <!-- DG -->    
-                      
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-    
+                          Vittori A.<hr>
+                          Albarracín O.
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
                           Botto<hr>
                           Adra
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>3</td>   <!-- SF -->
-                      <td>3</td>   <!-- SC -->
-                      <td>0</td>   <!-- DS -->
-                      <td>29</td>   <!-- GF -->
-                      <td>30</td>   <!-- GC -->
-                      <td>-1</td>   <!-- DG -->
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-                 Nuñez<hr>
-                          Montero
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
-                      <td>2</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-2</td>   <!-- DS -->
-                      <td>32</td>   <!-- GF -->
-                      <td>34</td>   <!-- GC -->
-                      <td>-2</td>   <!-- DG -->
-                      
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -1269,21 +1179,20 @@
                             </div>
                           </td>
                           <td>
-                            6-3<br>
-                            6-7<br>
-                            5-7<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 16:00
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Vittori A.<hr>
-                              Albarracín O.</b>
+                              Vittori A.<hr>
+                              Albarracín O.
                             </div>
                           </td>
                         </tr>
@@ -1291,20 +1200,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Vittori A.<hr>
-                              Albarracín O.</b>
+                              Vittori A.<hr>
+                              Albarracín O.
                             </div>
                           </td>
                           <td>
-                            6-3<br>
-                            3-6<br>
-                            6-3<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 18:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1323,21 +1231,20 @@
                             </div>
                           </td>
                           <td>
-                            6-4<br>
-                            3-6<br>
-                            6-7<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 19:45
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Botto<hr>
-                              Adra</b>
+                              Botto<hr>
+                              Adra
                             </div>
                           </td>
                         </tr>
@@ -1370,62 +1277,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-
-                            Fernández J.<hr>
-                          Martinez L.
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
-                      <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
-                      <td>1</td>   <!-- SC -->
-                      <td>+3</td>   <!-- DS -->
-                      <td>29</td>   <!-- GF -->
-                      <td>20</td>   <!-- GC -->
-                      <td>+9</td>   <!-- DG -->
-                      
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
                           Albarracín F.<hr>
                           Aguilar
                         </div>
                       </th>
-                      <td>1</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>1</td>   <!-- SF -->
-                      <td>2</td>   <!-- SC -->
-                      <td>-1</td>   <!-- DS -->
-                      <td>14</td>   <!-- GF -->
-                      <td>16</td>   <!-- GC -->
-                      <td>-2</td>   <!-- DG -->      
-                                          
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-                          
-                         Maidana<hr>
+                          Maidana<hr>
                           Vega
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
-                      <td>1</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-3</td>   <!-- DS -->
-                      <td>17</td>   <!-- GF -->
-                      <td>27</td>   <!-- GC -->
-                      <td>-10</td>   <!-- DG -->  
-
-
-                      
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Fernández J.<hr>
+                          Martinez L.
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -1452,21 +1350,20 @@
                             </div>
                           </td>
                           <td>
-                            6-3<br>
-                            5-7<br>
-                            3-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 19:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Fernández J.<hr>
-                              Martinez L.</b>
+                              Fernández J.<hr>
+                              Martinez L.
                             </div>
                           </td>
                         </tr>
@@ -1479,20 +1376,20 @@
                             </div>
                           </td>
                           <td>
-                            3-6<br>
-                            3-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 21:00
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Fernández J.<hr>
-                              Martinez L.</b>
+                              Fernández J.<hr>
+                              Martinez L.
                             </div>
                           </td>
                         </tr>
@@ -1500,20 +1397,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Albarracín F.<hr>
-                              Aguilar</b>
+                              Albarracín F.<hr>
+                              Aguilar
                             </div>
                           </td>
                           <td>
-                            3-6<br>
-                            6-2<br>
-                            6-3<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 22:15
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1552,58 +1448,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-                          <b></b>Martinez J.<hr>
-                          Terra</b>
+                          Martinez J.<hr>
+                          Terra
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
                       <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
+                      <td>0</td>   <!-- SF -->
                       <td>0</td>   <!-- SC -->
-                      <td>+4</td>   <!-- DS -->
-                      <td>24</td>   <!-- GF -->
-                      <td>12</td>   <!-- GC -->
-                      <td>+12</td>   <!-- DG -->
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
-                          
-                           Vittori L.<hr>
-                          Barón
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>2</td>   <!-- SF -->
-                      <td>2</td>   <!-- SC -->
                       <td>0</td>   <!-- DS -->
-                      <td>16</td>   <!-- GF -->
-                      <td>17</td>   <!-- GC -->
-                      <td>-1</td>   <!-- DG -->
-
-                      
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-                         Gorosito<hr>
+                          Gorosito<hr>
                           López
                         </div>
                       </th>
-                      <td>2</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
+                      <td>0</td>   <!-- PP -->
                       <td>0</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-4</td>   <!-- DS -->
-                      <td>13</td>   <!-- GF -->
-                      <td>24</td>   <!-- GC -->
-                      <td>-11</td>   <!-- DG -->
-
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Vittori L.<hr>
+                          Barón
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -1625,19 +1516,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Martinez J.<hr>
-                              Terra</b>
+                              Martinez J.<hr>
+                              Terra
                             </div>
                           </td>
                           <td>
-                            6-4<br>
-                            6-4<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 13:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1651,19 +1542,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Martinez J.<hr>
-                              Terra</b>
+                              Martinez J.<hr>
+                              Terra
                             </div>
                           </td>
                           <td>
-                            6-4<br>
-                            6-0<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 14:45
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1682,20 +1573,20 @@
                             </div>
                           </td>
                           <td>
-                            1-6<br>
-                            4-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 21:00
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Vittori L.<hr>
-                              Barón</b>
+                              Vittori L.<hr>
+                              Barón
                             </div>
                           </td>
                         </tr>
@@ -1728,62 +1619,53 @@
                     <tr>
                       <th scope="row">
                         <div class="text-nowrap">
-                    
-                          Rodriguez<hr>
-                          Goró
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>2</td>   <!-- PG -->
-                      <td>0</td>   <!-- PP -->
-                      <td>4</td>   <!-- SF -->
-                      <td>0</td>   <!-- SC -->
-                      <td>+4</td>   <!-- DS -->
-                      <td>24</td>   <!-- GF -->
-                      <td>6</td>   <!-- GC -->
-                      <td>+18</td>   <!-- DG -->
-
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
-
-                          Aguirre<hr>
-                          Fernández K.
-                        </div>
-                      </th>
-                      <td>2</td>   <!-- PJ -->
-                      <td>1</td>   <!-- PG -->
-                      <td>1</td>   <!-- PP -->
-                      <td>2</td>   <!-- SF -->
-                      <td>2</td>   <!-- SC -->
-                      <td>0</td>   <!-- DS -->
-                      <td>18</td>   <!-- GF -->
-                      <td>16</td>   <!-- GC -->
-                      <td>+2</td>   <!-- DG -->
-
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="text-nowrap">
-
                           Vittori F.<hr>
                           Fálico
                         </div>
                       </th>
-                      <td>1</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PJ -->
                       <td>0</td>   <!-- PG -->
-                      <td>2</td>   <!-- PP -->
+                      <td>0</td>   <!-- PP -->
                       <td>0</td>   <!-- SF -->
-                      <td>4</td>   <!-- SC -->
-                      <td>-4</td>   <!-- DS -->
-                      <td>4</td>   <!-- GF -->
-                      <td>24</td>   <!-- GC -->
-                      <td>-20</td>   <!-- DG -->
-                                    
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Rodriguez<hr>
+                          Goró
+                        </div>
+                      </th>
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="text-nowrap">
+                          Aguirre<hr>
+                          Fernández K.
+                        </div>
+                      </th>Bergna
+                      <td>0</td>   <!-- PJ -->
+                      <td>0</td>   <!-- PG -->
+                      <td>0</td>   <!-- PP -->
+                      <td>0</td>   <!-- SF -->
+                      <td>0</td>   <!-- SC -->
+                      <td>0</td>   <!-- DS -->
+                      <td>0</td>   <!-- GF -->
+                      <td>0</td>   <!-- GC -->
+                      <td>0</td>   <!-- DG -->
                     </tr>
                     <!-- Agrega más filas según sea necesario -->
                   </tbody>
@@ -1805,19 +1687,19 @@
                         <tr>
                           <td>
                             <div class="text-nowrap">
-                              <b>Rodriguez<hr>
-                              Goró</b>
+                              Rodriguez<hr>
+                              Goró
                             </div>
                           </td>
                           <td>
-                            6-2<br>
-                            6-4<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 18:00
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
@@ -1836,20 +1718,20 @@
                             </div>
                           </td>
                           <td>
-                            0-6<br>
-                            0-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 21:15
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Rodriguez<hr>
-                              Goró</b>
+                              Rodriguez<hr>
+                              Goró
                             </div>
                           </td>
                         </tr>
@@ -1862,20 +1744,20 @@
                             </div>
                           </td>
                           <td>
-                            4-6<br>
-                            0-6<br>
+                            0-0<br>
+                            0-0<br>
                             <hr>
                             <font size="-2">
                               Palermo Padel<br>
-                              <div class=text-primary>
+                              <font color="#ed4c4c">
                                 Sábado 23/12/2023 22:30
-                              </div>
+                              <font>
                             </font>
                           </td>
                           <td>
                             <div class="text-nowrap">
-                              <b>Aguirre<hr>
-                              Fernández K.</b>
+                              Aguirre<hr>
+                              Fernández K.
                             </div>
                           </td>
                         </tr>
@@ -1900,64 +1782,41 @@
         </p>
       </div>
 
-      <div class="card border-primary mb-4" id="llave">
-        <h3 id="test" class="card-header text-white bg-primary">
+      <!-- 
+      <div class="card mb-4" id="llave">
+        <h3 class="card-header">
             Llave final
-        </h3>
-        <div class="card-body scrollable-card" style="text-align:center">
-          
-          <iframe src="bracket.html" onload="set_text()" id="bracket-iframe" width="700" height="1200" frameborder="0" class="overflow-auto"></iframe>
-          
-          <!--
-          <div class="my_gracket overflow-auto"></div>
-          -->
-          <!--
+          </h3>
+        <div class="card-body">
           <div class="demo overflow-auto">
           </div>
-          -->
         </div>
       </div>
-      
-      <div class="card border-primary mb-4" id="poll">
-        <div class="mb-2 card-header text-white bg-primary">
-          <h3>          
-            MVP
-          </h3>
-          <ul class="nav nav-pills card-header-pills nav-fill" id="mvpTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary active" id="mvp-results-tab" data-bs-toggle="tab" data-bs-target="#mvp-results-tab-pane" type="button" role="tab" aria-controls="mvp-results-tab-pane" aria-selected="true">Resultados</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="mvp-form-tab" data-bs-toggle="tab" data-bs-target="#mvp-form-tab-pane" type="button" role="tab" aria-controls="mvp-form-tab-pane" aria-selected="false">Votar</button>
-            </li>
-          </ul>
+      -->
+
+      <div class="card mb-4">
+        <h3 class="card-header text-white bg-primary">
+          Poll
+      </h3>
+      <div class="card-body scrollable-card" style="text-align:center">
+        
+        <iframe src="poll.html" id="bracket-iframe" width="700" height="500" frameborder="0" class="overflow-auto"></iframe>
+        
+        <!--
+        <div class="my_gracket overflow-auto"></div>
+        -->
+        <!--
+        <div class="demo overflow-auto">
         </div>
-        <div class="tab-content" id="mvpTabContent">
-          <div class="tab-pane fade show active" id="mvp-results-tab-pane" role="tabpanel" aria-labelledby="mvp-results-tab" tabindex="0">
-            <div class="card-body scrollable-card" style="text-align:center">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe cass="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSJYncDiucaGuGbNSL-YUVb9E-CDHmMOaoRFy9x8TRkPYwi2uOz7xuRdpfO-HPIetbGGWq5HCPrcWOt/pubchart?oid=1680497823&amp;format=interactive" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="mvp-form-tab-pane" role="tabpanel" aria-labelledby="mvp-form-tab" tabindex="0">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScoP1bd-gDzIq6kwiKEJTUqeFaPT5cUnNAG3lohLA5yua6iuA/viewform?embedded=true" width="640" height="1774" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-              </div>
-            </div>
-          </div>
-          <!--
-          <iframe src="poll.html" id="bracket-iframe" width="700" height="300" frameborder="0" class="overflow-auto"></iframe>
-          -->
-        </div>
+        -->
+      </div>
       </div>
 
-      <div class="card border-primary mb-4" id="sponsors">
-        <h3 class="card-header text-white bg-primary">
+      <div class="card mb-4" id="sponsors">
+        <h3 class="card-header">
             Sponsors
           </h3>
-        <div class="card-body text-center">
+        <div class="card-body">
           <img src="logos-sponsors/AEInsumos.png" class="mx-auto m-6" style="width: 100px;">
           <img src="logos-sponsors/Apap.jpg" class="mx-auto m-6" style="width: 100px;">
           <img src="logos-sponsors/DecorARTE.jpg" class="mx-auto m-6" style="width: 100px;">
@@ -1984,13 +1843,6 @@
           <img src="logos-sponsors/ta/MinimercadoALI.jpeg" class="mx-auto m-6" style="width: 100px;">
           <img src="logos-sponsors/ta/SuperProfe.png" class="mx-auto m-6" style="width: 100px;">
           <img src="logos-sponsors/ta/UnderMoon.png" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/Copia de BANNER Nebitel 20CM.jpg" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/DR Cuadrado.png" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/el bodegón.jpg" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/imagen deportiva.jpg" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/logo mates parana.jpg" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/paz y flora.jpg" class="mx-auto m-6" style="width: 100px;">
-          <img src="logos-sponsors/faltantes/tu super gula.jpg" class="mx-auto m-6" style="width: 100px;">
         </div>
       </div>
       
@@ -1999,408 +1851,169 @@
 </div>
 
 <script>
-  // Obtén el elemento por su ID
-  //var miElemento = document.getElementById("llave1-equipo1");
-
-  // Agrega texto al elemento usando textContent
-  //miElemento.textContent = "Hola, este es un texto agregado desde JavaScript.";
-
-  function set_text()
-  {
-    var myIFrame = document.getElementById('bracket-iframe').contentWindow.document;
-
-    // ---------------- Octavos llave 1 ------------------------
-    var elemento = myIFrame.getElementById("O-L1-P1");
-    elemento.innerHTML = "Enrico<br>Carponi";
-
-    elemento = myIFrame.getElementById("O-L1-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L1-P2");
-    elemento.innerHTML = "Bergna<br>Galeano&nbspG.";
-
-    elemento = myIFrame.getElementById("O-L1-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L1-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("O-L1-F");
-    elemento.innerHTML = "Sábado 30/12 - 11:00hs";
-
-    // ---------------- Octavos llave 2 ------------------------
-    elemento = myIFrame.getElementById("O-L2-P1");
-    elemento.innerHTML = "Vittori&nbspL<br>Barón";
-
-    elemento = myIFrame.getElementById("O-L2-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L2-P2");
-    elemento.innerHTML = "Rodriguez<br>Goró";
-
-    elemento = myIFrame.getElementById("O-L2-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L2-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("O-L2-F");
-    elemento.innerHTML = "Sábado 30/12 - 11:00hs";
-
-    // ---------------- Octavos llave 3 ------------------------
-    elemento = myIFrame.getElementById("O-L3-P1");
-    elemento.innerHTML = "Vittori&nbspA.<br>Albarracín&nbspO.";
-
-    elemento = myIFrame.getElementById("O-L3-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L3-P2");
-    elemento.innerHTML = "Albarracín&nbspF.<br>Aguilar";
-
-    elemento = myIFrame.getElementById("O-L3-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L3-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("O-L3-F");
-    elemento.innerHTML = "Sábado 30/12 - 11:00hs";
-
-    // ---------------- Octavos llave 4 ------------------------
-    elemento = myIFrame.getElementById("O-L4-P1");
-    elemento.innerHTML = "Pertus<br>Galeano&nbspD.";
-
-    elemento = myIFrame.getElementById("O-L4-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">4</span>\
-      <span class=\"tournament-bracket__number\">3</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L4-P2");
-    elemento.innerHTML = "Gauna<br>Donda";
-
-    elemento = myIFrame.getElementById("O-L4-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">6</span>\
-      <span class=\"tournament-bracket__number\">6</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L4-S2");
-    elemento.classList.toggle('tournament-bracket__team--winner');
-    
-    elemento = myIFrame.getElementById("O-L4-F");
-    elemento.innerHTML = "Horario a coordinar";
-
-    // ---------------- Octavos llave 5 ------------------------
-    elemento = myIFrame.getElementById("O-L5-P1");
-    elemento.innerHTML = "Gaztelumendi<br>Villagra";
-
-    elemento = myIFrame.getElementById("O-L5-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L5-P2");
-    elemento.innerHTML = "Diaz<br>Vergara";
-
-    elemento = myIFrame.getElementById("O-L5-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L5-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-    
-    elemento = myIFrame.getElementById("O-L5-F");
-    elemento.innerHTML = "Sábado 30/12 - 12:15hs";
-
-    // ---------------- Octavos llave 6 ------------------------
-    elemento = myIFrame.getElementById("O-L6-P1");
-    elemento.innerHTML = "Botto<br>Adra";
-
-    elemento = myIFrame.getElementById("O-L6-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L6-P2");
-    elemento.innerHTML = "Fernandez&nbspJ.<br>Martínez&nbspL.";
-
-    elemento = myIFrame.getElementById("O-L6-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L6-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-    
-    elemento = myIFrame.getElementById("O-L6-F");
-    elemento.innerHTML = "Sábado 30/12 - 12:15hs";
-
-    // ---------------- Octavos llave 7 ------------------------
-    elemento = myIFrame.getElementById("O-L7-P1");
-    elemento.innerHTML = "Martínez&nbspL.<br>Terra";
-
-    elemento = myIFrame.getElementById("O-L7-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L7-P2");
-    elemento.innerHTML = "Aguirre<br>Fernandez&nbspK.";
-
-    elemento = myIFrame.getElementById("O-L7-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L7-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-    
-    elemento = myIFrame.getElementById("O-L7-F");
-    elemento.innerHTML = "Sábado 30/12 - 12:15hs";
-
-    // ---------------- Octavos llave 8 ------------------------
-    elemento = myIFrame.getElementById("O-L8-P1");
-    elemento.innerHTML = "Corbalán<br>Langhi";
-
-    elemento = myIFrame.getElementById("O-L8-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("O-L8-P2");
-    elemento.innerHTML = "Vallejo<br>Hutin";
-
-    elemento = myIFrame.getElementById("O-L8-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("O-L8-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-    
-    elemento = myIFrame.getElementById("O-L8-F");
-    elemento.innerHTML = "Sábado 30/12 - 12:15hs";
-
-
-
-
-
-
-
-    // ---------------- Cuartos llave 1 ------------------------
-    elemento = myIFrame.getElementById("C-L1-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L1-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("C-L1-P2");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L1-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("C-L1-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("C-L1-F");
-    elemento.innerHTML = "Sábado 30/12 - 14:30hs";
-
-    // ---------------- Cuartos llave 2 ------------------------
-    elemento = myIFrame.getElementById("C-L2-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L2-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("C-L2-P2");
-    elemento.innerHTML = "Gauna<br>Donda";
-
-    elemento = myIFrame.getElementById("C-L2-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("C-L2-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("C-L2-F");
-    elemento.innerHTML = "Sábado 30/12 - 14:30hs";
-
-    // ---------------- Cuartos llave 3 ------------------------
-    elemento = myIFrame.getElementById("C-L3-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L3-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("C-L3-P2");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L3-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("C-L3-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("C-L3-F");
-    elemento.innerHTML = "Sábado 30/12 - 14:30hs";
-
-  // ---------------- Cuartos llave 4 ------------------------
-  elemento = myIFrame.getElementById("C-L4-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L4-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("C-L4-P2");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("C-L4-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("C-L4-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("C-L4-F");
-    elemento.innerHTML = "Sábado 30/12 - 14:30hs";
-
-
-
-
-
-    // ---------------- Semis llave 1 ------------------------
-    elemento = myIFrame.getElementById("S-L1-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("S-L1-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("S-L1-P2");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("S-L1-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("S-L1-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("S-L1-F");
-    elemento.innerHTML = "Sábado 30/12 - 17:00hs";
-
-    // ---------------- Semis llave 2 ------------------------
-    elemento = myIFrame.getElementById("S-L2-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("S-L2-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("S-L2-P2");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("S-L2-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("S-L2-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("S-L2-F");
-    elemento.innerHTML = "Sábado 30/12 - 17:00hs";
-
-
-
-
-
-    // ---------------- Final ------------------------
-    elemento = myIFrame.getElementById("F-L1-P1");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("F-L1-S1");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    elemento = myIFrame.getElementById("F-L1-P2");
-    elemento.innerHTML = "-<br>-";
-
-    elemento = myIFrame.getElementById("F-L1-S2");
-    elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">0</span>\
-      <span class=\"tournament-bracket__number\">0</span>\
-    ";
-
-    //elemento = myIFrame.getElementById("F-L1-S1");
-    //elemento.classList.toggle('tournament-bracket__team--winner');
-
-    elemento = myIFrame.getElementById("F-L1-F");
-    elemento.innerHTML = "Sábado 30/12 - 21:00hs";
-
+  var singleElimination = {
+    "teams": [                // Equipos
+      ["Team 1", "Team 2"],   // Primer partido
+      ["Team 3", "Team 4"],   // Segundo partido
+      ["Team 5", "Team 6"],
+      ["Team 7", "Team 8"],
+      ["Team 9", "Team 10"],
+      ["Team 11", "Team 12"],
+      ["Team 13", "Team 14"],
+      ["Team 15", "Team 16"]
+    ],
+    "results": [            // Lista de llaves (una sola)
+      [                     // Lista de rondas en esta llave
+        [                   // Primera ronda
+          [1-1, 2-0],
+          [0, 0],
+          [0, 0],
+          [0, 0],
+          [0, 0],
+          [0, 0],
+          [0, 0],
+          [0, 0]
+        ],
+        [                   // Cuartos
+          [0, 0],           
+          [0, 0],     
+          [0, 0],           
+          [0, 0]
+        ],
+        [                   // Semifinales
+          [0, 0],           
+          [0, 0]
+        ],
+        [                   // Final y partido por el tercer puesto
+          [0, 0],           
+          [0, 0]
+        ]
+      ]
+    ]
   }
 
-</script>
+  function onclick(data) {
+    $('#matchCallback').text("onclick(data: '" + data + "')")
+  }
 
+  function onhover(data, hover) {
+    $('#matchCallback').text("onhover(data: '" + data + "', hover: " + hover + ")")
+  }
+
+  $('.demo').bracket({
+    init: singleElimination,
+    teamWidth: 100, // number
+    roundMargin: 40, // number
+    matchMargin: 40, // number
+    centerConnectors: true,
+    onMatchClick: onclick,
+    onMatchHover: onhover
+  });
+
+  /*
+  $('.demo').bracket({
+    init: null, // data to initialize
+    save: null, // called whenever bracket is modified
+    userData: null, // custom user data
+    onMatchClick: null, // callback
+    onMatchHover: null, // callback
+    decorator: null, // a function
+    skipSecondaryFinal: false,
+    skipGrandFinalComeback: false,
+    skipConsolationRound: false,
+    dir: 'rl', // "rl" or  "lr",
+    disableToolbar: false,
+    disableTeamEdit: false,
+    teamWidth: '', // number
+    scoreWidth: '', // number
+    roundMargin: '', // number
+    matchMargin: '', // number
+  });
+  */
+
+  myData = [
+    [
+      [ {"name" : "Enrico/Carponi", "displaySeed": "1A |", "score" : "0/0/0" },
+        {"name" : "Bergna/Galeano G.", "displaySeed": "2B |", "score" : "0/0/0" } ],
+      
+      [ {"name" : "Vittori L/Barón", "id" : "james-coutry", "seed" : 3},
+        {"name" : "Rodriguez/Goró", "id" : "sam-merrill", "seed" : 4}],
+      
+      [ {"name" : "Vittori A./Albarracín O.", "id" : "anthony-hopkins", "seed" : 5},
+        {"name" : "Albarracín F./Aguilar", "id" : "everett-zettersten", "seed" : 6} ],
+      
+      [ {"name" : "Pertus/Galeano D.", "id" : "john-scott", "seed" : 7},
+        {"name" : "Gauna/Donda", "id" : "teddy-koufus", "seed" : 8}],
+      
+      [ {"name" : "Gaztelumendi/Villagra", "id" : "arnold-palmer", "seed" : 9},
+        {"name" : "Diaz/Vergara", "id" : "ryan-anderson", "seed" : 10} ],
+      
+      [ {"name" : "Botto/Adra", "id" : "jesse-james", "seed" : 1},
+        {"name" : "Fernandez J./Martínez L.", "id" : "scott-anderson", "seed" : 12}],
+      
+      [ {"name" : "Martínez L./Terra", "id" : "josh-groben", "seed" : 13},
+        {"name" : "Aguirre/Fernandez K.", "id" : "sammy-zettersten", "seed" : 14} ],
+      
+      [ {"name" : "Corbalán/Langhi", "id" : "jake-coutry", "seed" : 15},
+        {"name" : "Vallejo/Hutin", "id" : "spencer-zettersten", "seed" : 16}]
+    ],
+    [
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }],
+
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }],
+
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }],
+
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }]
+    ],
+    [
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }],
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }]
+    ],
+    [
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" },
+      {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" }]
+    ],
+    [
+      [ {"name" : "&emsp;&emsp;&emsp;-------&emsp;&emsp;&emsp;", "id" : "", "seed" : "", "displaySeed": "", "score" : "" } ]
+    ]
+  ];
+
+  $(".my_gracket").gracket({ 
+    src: myData,
+
+    // default CSS classes
+    gracketClass : "g_gracket",
+    gameClass : "g_game",
+    roundClass : "g_round",
+    roundLabelClass : "g_round_label",
+    teamClass : "g_team",
+    winnerClass : "g_winner",
+    spacerClass : "g_spacer",
+    currentClass : "g_current",
+    seedClass : "g_seed",
+
+    // radius in pixels
+    cornerRadius : 5,
+
+    // canvas options
+    canvasId : "g_canvas",
+    canvasClass : "g_canvas",
+    canvasLineColor : "#AAAAAA",
+    canvasLineCap : "round",
+    canvasLineWidth : 2,
+    canvasLineGap : 15,
+
+    // an array of round labels
+    roundLabels : ["Octavos", "Cuartos", "Semis", "Final", "Ganadores"]
+  });
+</script>
+  
 </body>
 </html>

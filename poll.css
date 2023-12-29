@@ -1,0 +1,61 @@
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&subset=latin-ext';
+
+body {
+    font-family: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h3 {
+	padding:15px 30px;
+	margin:-30px -30px 20px;
+	background:#9900FF;
+	color:#FFF;
+	animation-duration: 1s;
+  animation-name: glowit;
+}
+h4 {
+	margin-bottom:20px;
+}
+ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+li {
+	margin:0 0 10px 45px;
+	padding:8px 5px;
+	border-radius:5px;
+}
+li:last-of-type {
+	margin-bottom:0;
+}
+li span {
+	margin-left:-50px;
+	width:55px;
+	display:inline-block;
+}
+.poll {
+	box-sizing:border-box;
+	max-width:600px;
+	border:1px solid #CCC;
+	padding:30px;
+	margin:30px auto;
+}
+.poll-bordered li {
+	border:1px solid #DDD;
+}
+
+@keyframes glowit {
+  0% {
+		background:#9900FF;
+    color:#FFFFFF; 
+  }
+
+  50% {
+		background:#CC00FF;
+    color:#FFFF00;
+  }
+	100% {
+		background:#9900FF;
+    color:#FFFFFF; 
+  }
+}
