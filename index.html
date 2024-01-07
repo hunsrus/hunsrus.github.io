@@ -64,6 +64,9 @@
           <a class="nav-link" href="#llave">Llave final</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#votacion">Votación MVP</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#sponsors">Sponsors</a>
         </li>
       </ul>
@@ -105,7 +108,10 @@
           <a class="btn btn-primary btn-block w-100" href="#clasificacion" role="button">Clasificación</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#llave" role="button" disabled>Llave final</a>
+          <a class="btn btn-primary btn-block w-100" href="#llave" role="button">Llave final</a>
+        </div>
+        <div class="col-sm-5 col-md-6 mb-2">
+          <a class="btn btn-primary btn-block w-100" href="#votacion" role="button">Votación MVP</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
           <a class="btn btn-primary btn-block w-100" href="#sponsors" role="button">Sponsors</a>
@@ -1918,36 +1924,35 @@
         </div>
       </div>
       
-      <div class="card border-primary mb-4" id="poll">
+      <div class="card border-primary mb-4" id="votacion">
         <div class="mb-2 card-header text-white bg-primary">
           <h3>          
-            MVP
+            Votación MVP
           </h3>
           <ul class="nav nav-pills card-header-pills nav-fill" id="mvpTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary active" id="mvp-results-tab" data-bs-toggle="tab" data-bs-target="#mvp-results-tab-pane" type="button" role="tab" aria-controls="mvp-results-tab-pane" aria-selected="true">Resultados</button>
+              <button class="nav-link btn-primary active" id="mvp-form-tab" data-bs-toggle="tab" data-bs-target="#mvp-form-tab-pane" type="button" role="tab" aria-controls="mvp-form-tab-pane" aria-selected="true">Votar</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="mvp-form-tab" data-bs-toggle="tab" data-bs-target="#mvp-form-tab-pane" type="button" role="tab" aria-controls="mvp-form-tab-pane" aria-selected="false">Votar</button>
+              <button class="nav-link btn-primary" id="mvp-results-tab" data-bs-toggle="tab" data-bs-target="#mvp-results-tab-pane" type="button" role="tab" aria-controls="mvp-results-tab-pane" aria-selected="false">Resultados</button>
             </li>
           </ul>
         </div>
         <div class="tab-content" id="mvpTabContent">
-          <div class="tab-pane fade show active" id="mvp-results-tab-pane" role="tabpanel" aria-labelledby="mvp-results-tab" tabindex="0">
-            <div class="card-body scrollable-card" style="text-align:center">
+          <div class="tab-pane fade show active" id="mvp-form-tab-pane" role="tabpanel" aria-labelledby="mvp-form-tab" tabindex="0">
+            <div class="card-body">
               <div class="embed-responsive embed-responsive-1by1">
-                <iframe cass="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSJYncDiucaGuGbNSL-YUVb9E-CDHmMOaoRFy9x8TRkPYwi2uOz7xuRdpfO-HPIetbGGWq5HCPrcWOt/pubchart?oid=1680497823&amp;format=interactive" frameborder="0" allowfullscreen></iframe>
+                <iframe cass="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSev7WUDyfitHJokA-JElTcF-psIcJ2pPy13U26yVXEhH-YJVQ/viewform?embedded=true" width="640" height="1700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="mvp-form-tab-pane" role="tabpanel" aria-labelledby="mvp-form-tab" tabindex="0">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-1by1">
-                <iframe cass="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLScoP1bd-gDzIq6kwiKEJTUqeFaPT5cUnNAG3lohLA5yua6iuA/viewform?embedded=true" width="640" height="1700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-              </div>
+          <div class="tab-pane fade" id="mvp-results-tab-pane" role="tabpanel" aria-labelledby="mvp-results-tab" tabindex="0">
+            <div class="card-body scrollable-card" style="text-align:center">
+              <iframe width="301" height="194" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQw0JA0eGJd-xRymdQ6dRexGr82pC-xEFmKD3_18kIBBQq-Tvss1ohZzLG0Rd5GsZN_LDukJwcVZtR_/pubchart?oid=1373287924&amp;format=interactive"></iframe>
             </div>
           </div>
           <!--
+            <iframe cass="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLScoP1bd-gDzIq6kwiKEJTUqeFaPT5cUnNAG3lohLA5yua6iuA/viewform?embedded=true" width="640" height="1700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
           <iframe src="poll.html" id="bracket-iframe" width="700" height="300" frameborder="0" class="overflow-auto"></iframe>
           -->
         </div>
@@ -1999,11 +2004,6 @@
 </div>
 
 <script>
-  // Obtén el elemento por su ID
-  //var miElemento = document.getElementById("llave1-equipo1");
-
-  // Agrega texto al elemento usando textContent
-  //miElemento.textContent = "Hola, este es un texto agregado desde JavaScript.";
 
   function set_text()
   {
@@ -2020,7 +2020,7 @@
     ";
 
     elemento = myIFrame.getElementById("O-L1-P2");
-    elemento.innerHTML = "Bergna<br>Galeano&nbspG.";
+    elemento.innerHTML = "Bergna<br>Galeano G.";
 
     elemento = myIFrame.getElementById("O-L1-S2");
     elemento.innerHTML = "\
@@ -2036,7 +2036,7 @@
 
     // ---------------- Octavos llave 2 ------------------------
     elemento = myIFrame.getElementById("O-L2-P1");
-    elemento.innerHTML = "Vittori&nbspL<br>Barón";
+    elemento.innerHTML = "Vittori L.<br>Barón";
 
     elemento = myIFrame.getElementById("O-L2-S1");
     elemento.innerHTML = "\
@@ -2061,7 +2061,7 @@
 
     // ---------------- Octavos llave 3 ------------------------
     elemento = myIFrame.getElementById("O-L3-P1");
-    elemento.innerHTML = "Vittori&nbspA.<br>Albarracín&nbspO.";
+    elemento.innerHTML = "Vittori A.<br>Albarracín O.";
 
     elemento = myIFrame.getElementById("O-L3-S1");
     elemento.innerHTML = "\
@@ -2070,7 +2070,7 @@
     ";
 
     elemento = myIFrame.getElementById("O-L3-P2");
-    elemento.innerHTML = "Albarracín&nbspF.<br>Aguilar";
+    elemento.innerHTML = "Albarracín F.<br>Aguilar";
 
     elemento = myIFrame.getElementById("O-L3-S2");
     elemento.innerHTML = "\
@@ -2086,12 +2086,12 @@
 
     // ---------------- Octavos llave 4 ------------------------
     elemento = myIFrame.getElementById("O-L4-P1");
-    elemento.innerHTML = "Pertus<br>Galeano&nbspD.";
+    elemento.innerHTML = "Pertus<br>Galeano D.";
 
     elemento = myIFrame.getElementById("O-L4-S1");
     elemento.innerHTML = "\
-      <span class=\"tournament-bracket__number\">4</span>\
       <span class=\"tournament-bracket__number\">3</span>\
+      <span class=\"tournament-bracket__number\">4</span>\
     ";
 
     elemento = myIFrame.getElementById("O-L4-P2");
@@ -2145,7 +2145,7 @@
     ";
 
     elemento = myIFrame.getElementById("O-L6-P2");
-    elemento.innerHTML = "Fernandez&nbspJ.<br>Martínez&nbspL.";
+    elemento.innerHTML = "Fernandez J.<br>Martínez L.";
 
     elemento = myIFrame.getElementById("O-L6-S2");
     elemento.innerHTML = "\
@@ -2161,7 +2161,7 @@
 
     // ---------------- Octavos llave 7 ------------------------
     elemento = myIFrame.getElementById("O-L7-P1");
-    elemento.innerHTML = "Martínez&nbspL.<br>Terra";
+    elemento.innerHTML = "Martínez L.<br>Terra";
 
     elemento = myIFrame.getElementById("O-L7-S1");
     elemento.innerHTML = "\
@@ -2170,7 +2170,7 @@
     ";
 
     elemento = myIFrame.getElementById("O-L7-P2");
-    elemento.innerHTML = "Aguirre<br>Fernandez&nbspK.";
+    elemento.innerHTML = "Aguirre<br>Fernandez K.";
 
     elemento = myIFrame.getElementById("O-L7-S2");
     elemento.innerHTML = "\

@@ -360,7 +360,7 @@ h2 {
 }
 .tournament-bracket__caption {
   font-size: 1.0rem;
-  color: #B15D25FF;
+  color: #df691aff;
   font-weight: 500;
   padding-bottom: 0.75em;
 }
@@ -408,6 +408,7 @@ h2 {
   text-decoration: none;
   cursor: help;
   transition: padding 0.2s ease-in-out;
+  white-space: nowrap;
 }
 @media (max-width: 24em) {
   .tournament-bracket__code {
