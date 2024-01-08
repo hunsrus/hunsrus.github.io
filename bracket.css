@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&subset=latin-ext';
+@import './constants.css';
 /*!
  * Responsive Tournament Bracket
  * Copyright 2016 Jakub HÃ¡jek
@@ -360,7 +361,7 @@ h2 {
 }
 .tournament-bracket__caption {
   font-size: 1.0rem;
-  color: #df691aff;
+  color: var(--primary);
   font-weight: 500;
   padding-bottom: 0.75em;
 }
