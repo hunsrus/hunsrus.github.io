@@ -93,7 +93,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-9 mx-auto">
+    <div class="col-md-10 mx-auto">
       <img src="logo-placeholder.png" class="mx-auto d-block m-5 w-50">
       <!-- <h1 class="mb-4 text-center text-md-left">Torneo Elías Metz 2023</h1> -->
       
@@ -117,22 +117,27 @@
         </div>
       </div>
 
+      <!-- <div class="btn-group d-flex" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Suma 7</button>
+        <button type="button" class="btn btn-secondary">Suma 11</button>
+        <button type="button" class="btn btn-secondary">7ma</button>
+      </div> -->
       <!-- Botones -->
-      <div class="row mt-4 mb-4 justify-content-center">
-        <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#inscriptos" role="button"><i class="bi bi-person-circle"></i> Inscriptos</a>
+      <div class="row mt-4 mb-4">
+        <div class="col-sm mb-2">
+          <a class="btn btn-primary btn-block d-flex justify-content-between align-items-center" href="#inscriptos" role="button">Inscriptos <i class="bi bi-person-circle"></i></a>
         </div>
-        <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#clasificacion" role="button"><i class="bi bi-table"></i> Clasificación</a>
+        <div class="col-sm mb-2">
+          <a class="btn btn-primary btn-block d-flex justify-content-between align-items-center" href="#clasificacion" role="button">Clasificación<i class="bi bi-table"></i></a>
         </div>
-        <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#llave" role="button"><i class="bi bi-trophy-fill"></i> Llave final</a>
+        <div class="col-sm mb-2">
+          <a class="btn btn-primary btn-block d-flex justify-content-between align-items-center" href="#llave" role="button">Llave final <i class="bi bi-trophy-fill"></i></a>
         </div>
-        <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#votacion" role="button"><i class="bi bi-person-fill-up"></i> Votación MVP</a>
+        <div class="col-sm mb-2">
+          <a class="btn btn-primary btn-block d-flex justify-content-between align-items-center" href="#votacion" role="button">MVP<i class="bi bi-person-fill-up"></i></a>
         </div>
-        <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#sponsors" role="button"><i class="bi bi-heart-fill"></i> Sponsors</a>
+        <div class="col-sm mb-2">
+          <a class="btn btn-primary btn-block d-flex justify-content-between align-items-center" href="#sponsors" role="button">Sponsors<i class="bi bi-heart-fill"></i></a>
         </div>
       </div>
       
@@ -407,7 +412,7 @@
           </h5>
           <ul class="nav nav-pills card-header-pills" id="myTab" role="tablist">
             <li class="nav-item dropdown">
-              <a class="nav-link btn-primary active dropdown-toggle" id="zone-dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Zona A</a>
+              <h5 class="nav-link btn-primary active dropdown-toggle" id="zone-dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Zona A</h5>
               <ul class="dropdown-menu">
                 <li class="dropdown-item active" id="za-tab" onclick="set_zone(this);" data-bs-toggle="tab" data-bs-target="#za-tab-pane" type="button" role="tab" aria-controls="za-tab-pane" aria-selected="true">Zona A</li>
                 <li class="dropdown-item" id="zb-tab" onclick="set_zone(this);" data-bs-toggle="tab" data-bs-target="#zb-tab-pane" type="button" role="tab" aria-controls="zb-tab-pane" aria-selected="false">Zona B</li>
