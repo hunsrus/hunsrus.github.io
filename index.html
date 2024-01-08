@@ -8,6 +8,9 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- iconos de bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!--
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="dist/jquery.bracket.min.js"></script>
@@ -15,8 +18,6 @@
   -->
   
   <style>
-    /* iconos de bootstrap */
-    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
     /* tipografía */
     @import 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&subset=latin-ext';
     body {
@@ -62,19 +63,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#inscriptos">Inscriptos</a>
+          <a class="nav-link" href="#inscriptos"><i class="bi bi-person-circle"></i> Inscriptos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#clasificacion">Clasificación</a>
+          <a class="nav-link" href="#clasificacion"><i class="bi bi-table"></i> Clasificación</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#llave">Llave final</a>
+          <a class="nav-link" href="#llave"><i class="bi bi-trophy-fill"></i> Llave final</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#votacion">Votación MVP</a>
+          <a class="nav-link" href="#votacion"><i class="bi bi-person-fill-up"></i> Votación MVP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#sponsors">Sponsors</a>
+          <a class="nav-link" href="#sponsors"><i class="bi bi-heart-fill"></i> Sponsors</a>
         </li>
       </ul>
     </div>
@@ -99,6 +100,7 @@
       <!-- Información del Torneo -->
       <div class="card border-primary mb-4">
         <h3 class="card-header text-white bg-primary">
+          <i class="bi bi-info-circle-fill"></i>
             Información del torneo
           </h3>
         <div class="card-body">
@@ -118,25 +120,26 @@
       <!-- Botones -->
       <div class="row mt-4 mb-4 justify-content-center">
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#inscriptos" role="button">Inscriptos</a>
+          <a class="btn btn-primary btn-block w-100" href="#inscriptos" role="button"><i class="bi bi-person-circle"></i> Inscriptos</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#clasificacion" role="button">Clasificación</a>
+          <a class="btn btn-primary btn-block w-100" href="#clasificacion" role="button"><i class="bi bi-table"></i> Clasificación</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#llave" role="button">Llave final</a>
+          <a class="btn btn-primary btn-block w-100" href="#llave" role="button"><i class="bi bi-trophy-fill"></i> Llave final</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#votacion" role="button">Votación MVP</a>
+          <a class="btn btn-primary btn-block w-100" href="#votacion" role="button"><i class="bi bi-person-fill-up"></i> Votación MVP</a>
         </div>
         <div class="col-sm-5 col-md-6 mb-2">
-          <a class="btn btn-primary btn-block w-100" href="#sponsors" role="button">Sponsors</a>
+          <a class="btn btn-primary btn-block w-100" href="#sponsors" role="button"><i class="bi bi-heart-fill"></i> Sponsors</a>
         </div>
       </div>
       
      <!-- Jugadores inscriptos -->
       <div class="card border-primary mb-4" id="inscriptos">
           <h3 class="card-header text-white bg-primary">
+            <i class="bi bi-person-circle"></i>
             Jugadores Inscriptos
           </h3>
           <div class="card-body">
@@ -398,7 +401,10 @@
       <!-- Clasificación -->
       <div class="card border-primary mb-4" id="clasificacion">
         <div class="mb-2 card-header text-white bg-primary d-flex justify-content-between align-items-center">
-          <h3>Clasificación</h3>
+          <h3>
+            <i class="bi bi-table"></i>
+            Clasificación
+          </h3>
           <ul class="nav nav-pills card-header-pills" id="myTab" role="tablist">
             <li class="nav-item dropdown">
               <a class="nav-link btn-primary active dropdown-toggle" id="zone-dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Zona A</a>
@@ -1915,6 +1921,7 @@
 
       <div class="card border-primary mb-4" id="llave">
         <h3 id="test" class="card-header text-white bg-primary">
+          <i class="bi bi-trophy-fill"></i>
             Llave final
         </h3>
         <div class="card-body scrollable-card" style="text-align:center">
@@ -1933,7 +1940,8 @@
       
       <div class="card border-primary mb-4" id="votacion">
         <div class="mb-2 card-header text-white bg-primary">
-          <h3>          
+          <h3>
+            <i class="bi bi-person-fill-up"></i>
             Votación MVP
           </h3>
           <ul class="nav nav-pills card-header-pills nav-fill" id="mvpTab" role="tablist">
@@ -1967,6 +1975,7 @@
 
       <div class="card border-primary mb-4" id="sponsors">
         <h3 class="card-header text-white bg-primary">
+          <i class="bi bi-heart-fill"></i>
             Sponsors
           </h3>
         <div class="card-body text-center">
