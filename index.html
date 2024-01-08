@@ -89,7 +89,7 @@
             <li class="list-group-item"><b>Complejo:</b> Palermo Padel</li>
             <li class="list-group-item"><b>Categoría:</b> Suma 10</li>
             <li class="list-group-item"><b>Sistema:</b> Zona + Llave Final (Zonas x4 x3)</li>
-            <li class="list-group-item"><b>Costo de inscripción:</b> 5500 por jugador</li>
+            <li class="list-group-item"><b>Costo:</b> 5500 por jugador</li>
             <li class="list-group-item"><b>Contacto:</b> 3434522449</li>
           </ul>
         </div>
@@ -377,32 +377,23 @@
 
       <!-- Clasificación -->
       <div class="card border-primary mb-4" id="clasificacion">
-        <div class="mb-2 card-header text-white bg-primary">
+        <div class="mb-2 card-header text-white bg-primary d-flex justify-content-between align-items-center">
           <h3>Clasificación</h3>
-          <ul class="nav nav-pills card-header-pills nav-fill" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary active" id="za-tab" data-bs-toggle="tab" data-bs-target="#za-tab-pane" type="button" role="tab" aria-controls="za-tab-pane" aria-selected="true">Zona A</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zb-tab" data-bs-toggle="tab" data-bs-target="#zb-tab-pane" type="button" role="tab" aria-controls="zb-tab-pane" aria-selected="false">Zona B</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zc-tab" data-bs-toggle="tab" data-bs-target="#zc-tab-pane" type="button" role="tab" aria-controls="zc-tab-pane" aria-selected="false">Zona C</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zd-tab" data-bs-toggle="tab" data-bs-target="#zd-tab-pane" type="button" role="tab" aria-controls="zd-tab-pane" aria-selected="false">Zona D</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="ze-tab" data-bs-toggle="tab" data-bs-target="#ze-tab-pane" type="button" role="tab" aria-controls="ze-tab-pane" aria-selected="false">Zona E</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zf-tab" data-bs-toggle="tab" data-bs-target="#zf-tab-pane" type="button" role="tab" aria-controls="zf-tab-pane" aria-selected="false">Zona F</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zg-tab" data-bs-toggle="tab" data-bs-target="#zg-tab-pane" type="button" role="tab" aria-controls="zg-tab-pane" aria-selected="false">Zona G</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link btn-primary" id="zh-tab" data-bs-toggle="tab" data-bs-target="#zh-tab-pane" type="button" role="tab" aria-controls="zh-tab-pane" aria-selected="false">Zona H</button>
+          <ul class="nav nav-pills card-header-pills " id="myTab" role="tablist">
+            <li class="nav-item dropdown">
+              <a class="nav-link btn-primary dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Zonas</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item active" id="za-tab" data-bs-toggle="tab" data-bs-target="#za-tab-pane" type="button" role="tab" aria-controls="za-tab-pane" aria-selected="true">Zona A</li>
+                <li class="dropdown-item" id="zb-tab" data-bs-toggle="tab" data-bs-target="#zb-tab-pane" type="button" role="tab" aria-controls="zb-tab-pane" aria-selected="false">Zona B</li>
+                <li class="dropdown-item" id="zc-tab" data-bs-toggle="tab" data-bs-target="#zc-tab-pane" type="button" role="tab" aria-controls="zc-tab-pane" aria-selected="false">Zona C</li>
+                <li class="dropdown-item" id="zd-tab" data-bs-toggle="tab" data-bs-target="#zd-tab-pane" type="button" role="tab" aria-controls="zd-tab-pane" aria-selected="false">Zona D</li>
+                <li class="dropdown-item" id="ze-tab" data-bs-toggle="tab" data-bs-target="#ze-tab-pane" type="button" role="tab" aria-controls="ze-tab-pane" aria-selected="false">Zona E</li>
+                <li class="dropdown-item" id="zf-tab" data-bs-toggle="tab" data-bs-target="#zf-tab-pane" type="button" role="tab" aria-controls="zf-tab-pane" aria-selected="false">Zona F</li>
+                <li class="dropdown-item" id="zg-tab" data-bs-toggle="tab" data-bs-target="#zg-tab-pane" type="button" role="tab" aria-controls="zg-tab-pane" aria-selected="false">Zona G</li>
+                <li class="dropdown-item" id="zh-tab" data-bs-toggle="tab" data-bs-target="#zh-tab-pane" type="button" role="tab" aria-controls="zh-tab-pane" aria-selected="false">Zona H</li>
+                <!-- <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+              </ul>
             </li>
           </ul>
         </div>
